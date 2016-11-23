@@ -33,15 +33,39 @@ public class ListTest extends AbstractTest {
     }
 
 
+    /**
+     * 在不知道class类型的情况下，可以使用Array.newInstance
+     */
     @Test
-    public void test() {
-        Array.newInstance(String.class, 10);
+    public void testArrayNew() {
+        Object tmp = Array.newInstance(String.class, 10);
         Object[] task = {};
+        String[] array =  {"1", "2", };
+        for (int i = 0; i < array.length; i ++) {
+            String s = array[i];
+            logger.info("{}", s);
+        }
     }
 
+    /**
+     * 不能为空，值为0
+     */
     @Test
     public void testEmpty() {
         List list = new ArrayList();
+        list = null;
         logger.info("{}", list.isEmpty());
+    }
+
+    /**
+     * contain方法，可以直接判断是否包含为空变量
+     */
+    @Test
+    public void testContain() {
+        List<String> s = new ArrayList<>();
+        s.add("he");
+        logger.info("{}", s.contains("he"));
+        logger.info("{}", s.contains("s"));
+        logger.info("{}", s.contains(null));
     }
 }

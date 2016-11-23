@@ -2,6 +2,7 @@ package qian.ling.yi.thread;
 
 import org.junit.Test;
 import qian.ling.yi.AbstractTest;
+import sun.jvmstat.perfdata.monitor.CountedTimerTask;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
@@ -17,12 +18,16 @@ public class CountDownLatchTest extends AbstractTest{
      */
     private final static CountDownLatch mCountDownLatch = new CountDownLatch(2);
 
-    @Test
-    public void testBasic() throws Exception{
-        new Thread(new BasicThread()).start();
-        new Thread(new BasicThread()).start();
+
+    public static void main(String[] args) throws Exception {
+        CountDownLatchTest countDownLatchTest = new CountDownLatchTest();
+        new Thread(countDownLatchTest.new BasicThread()).start();
+        Thread.sleep(1000);
+        new Thread(countDownLatchTest.new BasicThread()).start();
         mCountDownLatch.await(1, TimeUnit.SECONDS);//等一秒，不管结果，继续执行
-        logger.info("运行结束");
+        System.out.println("不等了");
+        mCountDownLatch.await();//
+        System.out.println("运行结束");
     }
 
 
@@ -32,7 +37,7 @@ public class CountDownLatchTest extends AbstractTest{
         public void run() {
             logger.info("还需要执行：{}个线程", mCountDownLatch.getCount());
             try {
-                Thread.sleep(20000);
+                Thread.sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

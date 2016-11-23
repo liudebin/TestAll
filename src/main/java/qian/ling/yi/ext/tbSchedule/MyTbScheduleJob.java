@@ -44,6 +44,7 @@ public class MyTbScheduleJob implements IScheduleTaskDealSingle<String> {
         logger.info("ownSign {}", ownSign);//不同的开发人员需要进行数据隔离也可以用OwnSign来实现，避免不同人员的数据冲突。缺省配置的环境区域OwnSign='BASE'。
         logger.info("taskItemNum {}", taskItemNum);
         logger.info("taskItemList {}", JSON.toJSONString(taskItemList));
+        logger.info("taskItem {}", taskItemList.get(0).toString());
         logger.info("eachFetchDataNum {}", eachFetchDataNum);
 
         List list = new ArrayList(1);
