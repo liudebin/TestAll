@@ -10,12 +10,6 @@
 
 
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
 
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -74,7 +68,7 @@
       <dependency>
           <groupId>junit</groupId>
           <artifactId>junit</artifactId>
-          <version>4.11</version>
+          <version>4.12</version>
       </dependency>
 
     <dependency>
@@ -83,15 +77,6 @@
       <version>1.8.5</version>
       <!--<scope>test</scope>-->
     </dependency>
-
-    <!-- 徽商银行接口测试 -->
-    <dependency>
-      <groupId>net.sf.json-lib</groupId>
-      <artifactId>json-lib</artifactId>
-      <version>2.4</version>
-    </dependency>
-
-
 
     <!-- ************************ 框架 ************************** -->
     <dependency>
@@ -110,6 +95,18 @@
       <groupId>com.taobao.pamirs.schedule</groupId>
       <artifactId>tbschedule</artifactId>
       <version>3.3.3.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.14</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>4.3.3.RELEASE</version>
     </dependency>
 
   </dependencies>

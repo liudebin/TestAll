@@ -1,5 +1,6 @@
 package qian.ling.yi.jdk8;
 
+import com.alibaba.fastjson.JSON;
 import org.junit.Before;
 import org.junit.Test;
 import qian.ling.yi.AbstractTest;
@@ -51,6 +52,13 @@ public class ListForeach extends AbstractTest {
     public void testSet() {
         list.forEach(tmp -> tmp.put("1", "set"));
         list.forEach(tmp -> logger.info(tmp.toString()));
+    }
+
+
+    @Test
+    public void testRemoveIf() {
+        list.removeIf(map->map.containsKey("3"));
+        list.forEach(tmp-> logger.info("{}", JSON.toJSONString(tmp)));
     }
 
 }

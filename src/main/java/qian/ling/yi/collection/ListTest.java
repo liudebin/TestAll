@@ -11,9 +11,10 @@ import java.util.*;
  * Created by liuguobin on 2016/9/26.
  */
 public class ListTest extends AbstractTest {
+    String temp;
 
     @Test
-    public void testForAddMap() {
+    public void testForAdd() {
         List<Map<String, String>> list = new LinkedList<>();
         Map<String, String> map = null;
         for (int i = 0; i < 100; i ++) {
@@ -28,8 +29,19 @@ public class ListTest extends AbstractTest {
         }
         for (int i = 0;i < 100; i++) {
             Map<String, String> map1 = list.get(i);
-            logger.info(JSON.toJSONString(map1));
+//            logger.info(JSON.toJSONString(map1));
         }
+
+        ListTest listTest = null;
+        List<ListTest> s = new ArrayList<>(100);
+        for (int i = 0;i < 100; i++) {
+            listTest = new ListTest();
+            listTest.temp = i +"";
+            s.add(listTest);
+        }
+        s.forEach(listTest1 -> logger.info("{}", JSON.toJSON(listTest1.temp)));
+        ;
+
     }
 
 

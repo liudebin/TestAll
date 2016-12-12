@@ -1,8 +1,6 @@
 package qian.ling.yi.thread;
 
-import org.junit.Test;
 import qian.ling.yi.AbstractTest;
-import sun.jvmstat.perfdata.monitor.CountedTimerTask;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
