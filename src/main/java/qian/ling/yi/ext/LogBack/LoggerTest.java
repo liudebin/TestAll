@@ -8,6 +8,11 @@ import qian.ling.yi.AbstractTest;
  */
 public class LoggerTest extends AbstractTest{
 
+    /**
+     * 打印null
+     *
+     * hhanull
+     */
     @Test
     public void testLoggerNull() {
         String h = null;

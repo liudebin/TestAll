@@ -16,7 +16,7 @@ public class RandomTest extends AbstractTest {
      */
     @Test
     public void test() {
-        Random random1 = new Random(100);
+        Random random1 = new Random(100); //设seed 都重复
         Random random2 = new Random(100);
 
         logger.info("random1的随机数：{}", random1.nextInt());
@@ -24,14 +24,20 @@ public class RandomTest extends AbstractTest {
         logger.info("random1的随机数：{}", random1.nextInt());
         logger.info("random2的随机数：{}", random2.nextInt());
 
+        logger.info("random1的随机数：{}", random1.nextInt(10));
+        logger.info("random2的随机数：{}", random2.nextInt(10));
+        logger.info("random1的随机数：{}", random1.nextInt(10));
+        logger.info("random2的随机数：{}", random2.nextInt(10));
+
 
         logger.info("{}", Math.random());
         logger.info("{}", Math.random());
 
         Random random3 = new Random();
         Random random4 = new Random();
-        logger.info("{}", random3.nextInt());
-        logger.info("{}", random4.nextInt());
+        logger.info("{}", random3.nextInt(10));
+        logger.info("{}", random4.nextInt(10));
+
 
     }
 }

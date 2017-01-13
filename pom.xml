@@ -25,6 +25,29 @@
       <version>1.2</version>
     </dependency>
     <dependency>
+      <groupId>commons-net</groupId>
+      <artifactId>commons-net</artifactId>
+      <version>3.5</version>
+    </dependency>
+    <!-- ***** ftpclient ***** -->
+    <dependency>
+      <groupId>com.jcraft</groupId>
+      <artifactId>jsch</artifactId>
+      <version>0.1.54</version>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-net</groupId>
+      <artifactId>commons-net</artifactId>
+      <version>3.5</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-pool2</artifactId>
+      <version>2.3</version>
+    </dependency>
+    <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpclient</artifactId>
       <version>4.5.2</version>
@@ -47,6 +70,11 @@
       <version>3.4.6</version>
     </dependency>
 
+      <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+          <version>1.7.7</version>
+      </dependency>
 
     <dependency>
       <groupId>ch.qos.logback</groupId>
@@ -102,6 +130,21 @@
       <artifactId>fastjson</artifactId>
       <version>1.2.14</version>
     </dependency>
+
+    <dependency>
+      <groupId>com.alibaba.rocketmq</groupId>
+      <artifactId>rocketmq-client</artifactId>
+      <version>3.6.2.Final</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.alibaba.rocketmq/rocketmq-all -->
+    <dependency>
+      <groupId>com.alibaba.rocketmq</groupId>
+      <artifactId>rocketmq-all</artifactId>
+      <version>3.6.2.Final</version>
+    </dependency>
+
+
 
     <dependency>
       <groupId>org.springframework</groupId>
