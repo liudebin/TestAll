@@ -12,7 +12,9 @@ import java.util.Random;
 public class RandomTest extends AbstractTest {
 
     /**
-     * Random 多次重新启动可能会生成相同的值
+     * Random 多次重新启动可能会生成相同的值kk
+     * Random 不设种子的话，不会重复，
+     * Math.random() 就是通过这个
      */
     @Test
     public void test() {
