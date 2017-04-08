@@ -4,11 +4,7 @@ import com.alibaba.fastjson.JSON;
 import org.junit.Test;
 import qian.ling.yi.AbstractTest;
 
-import java.net.URLEncoder;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by liuguobin on 2016/9/27.
@@ -70,5 +66,15 @@ public class MapTest extends AbstractTest{
         logger.info(JSON.toJSONString(tmp));
         list.add("1");
         logger.info(JSON.toJSONString(tmp));
+    }
+
+    @Test
+    public void convertTest() {
+        List<Map> list = new ArrayList<>(1);
+        Map map = null;
+        list.add(map);
+        Map map1 = list.get(0);
+        Map map2 = (HashMap) map1;
+
     }
 }

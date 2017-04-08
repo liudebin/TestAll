@@ -48,7 +48,8 @@ public class MyTbScheduleJob implements IScheduleTaskDealSingle<String> {
         logger.info("eachFetchDataNum {}", eachFetchDataNum);
 
         List list = new ArrayList(1);
-//        list.add("");
+
+        list.add("");
         return list;
     }
 
@@ -70,6 +71,7 @@ public class MyTbScheduleJob implements IScheduleTaskDealSingle<String> {
         try {
             //insertData(model);
             System.out.println("执行任务");
+            Thread.sleep(10000);
 
             return true;
         } catch (Exception e) {

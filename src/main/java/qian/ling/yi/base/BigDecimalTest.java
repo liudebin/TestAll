@@ -63,5 +63,7 @@ public class BigDecimalTest extends AbstractTest {
         return BigDecimal.ONE;
     }
 
-
+    public void newTest() {
+        BigDecimal bigDecimal = new BigDecimal("123312");
+    }
 }

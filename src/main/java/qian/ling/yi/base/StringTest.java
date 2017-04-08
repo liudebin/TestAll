@@ -122,4 +122,10 @@ public class StringTest extends AbstractTest{
         logger.info("{}", s.matches("\\d*"));
     }
 
+    @Test
+    public void testValueOf() {
+        Integer i = null;
+        logger.info(String.valueOf(i));
+    }
+
 }

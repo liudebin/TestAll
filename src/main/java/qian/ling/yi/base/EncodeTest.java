@@ -18,4 +18,5 @@ public class EncodeTest extends AbstractTest {
         logger.info("{}，{}", s.length(), s);
         logger.info("{}", new String(s.getBytes("GBK"), "GBK").length());
     }
+
 }

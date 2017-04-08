@@ -122,4 +122,9 @@ public class EnumTest extends AbstractTest {
         return false;
     }
 
+    @Test
+    public void dsd() {
+        logger.info("{}, {}", TEST.QIAN.ordinal(), TEST.LING.ordinal());
+    }
+
 }

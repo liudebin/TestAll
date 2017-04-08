@@ -23,7 +23,7 @@ public class SFTClient {
                 host=JOptionPane.showInputDialog("Enter username@hostname",
                         /*System.getProperty("user.name")+
                                 "@localhost"*/
-                        "nuonuo@103.62.90.103");
+                        "nuonuo@103.62.90.28");
             }
             String user=host.substring(0, host.indexOf('@'));
             host=host.substring(host.indexOf('@')+1);

@@ -11,8 +11,14 @@ public class WhileTest extends AbstractTest {
     @Test
     public void testBreak() {
         while (true) {
+
             break;
         }
         logger.info("循环结束");
+
+
+
+
     }
+
 }
