@@ -77,4 +77,65 @@ public class MapTest extends AbstractTest{
         Map map2 = (HashMap) map1;
 
     }
+
+    /**
+     * 做key值的对象要重写hashCode 和 equals方法
+     * hash相等 = ，会判断对象是否是同一个 = ，不是 则 判断 equals
+     */
+    @Test
+    public void keyWork() {
+        Map<KeyTest, String> testMap = new HashMap<>();
+        new HashMap<>(1);
+        KeyTest keyTest = new KeyTest();
+        KeyTest keyTest1  = new KeyTest();
+        testMap.put(keyTest, "2");
+        testMap.put(keyTest1 , "3");
+    }
+
+    @Test
+    public void setKeyWork() {
+        Set<KeyTest> set = new HashSet<>();
+
+        KeyTest keyTest = new KeyTest();
+        KeyTest keyTest1 = new KeyTest();
+        set.add(keyTest);
+        set.add(keyTest1);
+    }
+
+    class KeyTest {
+        int i;
+
+        public int getI() {
+            return i;
+        }
+
+        public KeyTest setI(int i) {
+            this.i = i;
+            return this;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            System.out.println("equals方法");
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+
+            KeyTest keyTest = (KeyTest) o;
+
+            return i == keyTest.i;
+        }
+
+        @Override
+        public int hashCode() {
+            System.out.println("hashCode");
+            return i;
+        }
+    }
+
+    @Test
+    public void test() {
+        int i = 4;
+
+        System.out.println(i >> 1);
+    }
 }

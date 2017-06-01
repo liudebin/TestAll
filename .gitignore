@@ -1,9 +1,7 @@
 /build/
-/.idea
-.idea/
+/.idea/*
 .svn/
-target/
-bin/
+/bin/
 *.iml
 **/.iml
 *.epoch

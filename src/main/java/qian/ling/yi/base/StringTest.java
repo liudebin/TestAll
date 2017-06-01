@@ -128,4 +128,26 @@ public class StringTest extends AbstractTest{
         logger.info(String.valueOf(i));
     }
 
+    @Test
+    public void hh() {
+//        String format = "%" + 10 + "s";
+        String format = "%" + -10 + "s";
+        String str = "";
+        String tempResult = String.format(format, str);
+        logger.info("1" + tempResult + "1");
+    }
+
+
+    @Test
+    public void upLow() {
+       String name  = "0b";
+            //name = name.substring(0, 1).toUpperCase() + name.substring(1);
+            //return  name;
+            char[] cs = name.toCharArray();
+            cs[0] += 32;
+//            cs[0] += 64;
+            logger.info(String.valueOf(cs));
+
+    }
+
 }

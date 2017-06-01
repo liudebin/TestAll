@@ -27,4 +27,8 @@ public class SuperClass {
     public void setL(Long l) {
         this.l = l;
     }
+
+    public void mul() {
+        System.out.println("father = " );
+    }
 }

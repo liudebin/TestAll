@@ -18,7 +18,7 @@ public class BaseProxy extends AbstractTest{
         Object a = Proxy.newProxyInstance(this.getClass().getClassLoader(), BaseInterfaceImpl.class.getInterfaces(), new InvocationHandler() {
              @Override
              public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-//                 method.invoke(proxy, args);
+                 method.invoke(proxy, args);
                  System.out.println("heh");
                  return null;
              }

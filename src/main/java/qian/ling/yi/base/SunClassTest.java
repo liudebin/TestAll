@@ -33,6 +33,16 @@ public class SunClassTest extends SuperClass{
         return l;
     }
 
+    @Override
+    public void mul () {
+        System.out.println(" sun");
+    }
+
+    public void sun() {
+        System.out.println("private " );
+    }
+
+
     @Test
     public void testVar() {
         SunClassTest sunClassTest = new SunClassTest();
@@ -43,5 +53,15 @@ public class SunClassTest extends SuperClass{
         sunClassTest.setL(1L);
         System.out.println("sunClassTest.getL() = " + sunClassTest.getL());
         System.out.println("sunClassTest.getSuperL() = " + sunClassTest.getSuperL());
+    }
+
+    @Test
+    public void testMethod() {
+        SunClassTest sun = new SunClassTest();
+        sun.mul();
+
+        SuperClass supers = sun;
+        sun.sun();
+        supers.mul();
     }
 }
