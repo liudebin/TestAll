@@ -75,6 +75,11 @@ public class StringTest extends AbstractTest{
 
         logger.info("{}", a.substring(0, 1));
         logger.info("{}", a.substring(1, 2));
+//        logger.info("{}", a.substring(a.indexOf("e")));
+
+        a = "afileId1234";
+        String [] ha = a.split("fileId");
+        System.out.println();
     }
 
     /**

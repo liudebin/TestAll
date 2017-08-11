@@ -151,6 +151,32 @@
       <version>4.3.3.RELEASE</version>
     </dependency>
 
+    <dependency>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-all</artifactId>
+      <version>4.1.13.Final</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>23.0</version>
+    </dependency>
+
+      <dependency>
+          <groupId>com.netflix.hystrix</groupId>
+          <artifactId>hystrix-core</artifactId>
+          <version>1.5.12</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/com.lmax/disruptor -->
+      <dependency>
+          <groupId>com.lmax</groupId>
+          <artifactId>disruptor</artifactId>
+          <version>3.3.6</version>
+      </dependency>
+
+
   </dependencies>
   <build>
     <finalName>qian.ling.yi</finalName>
