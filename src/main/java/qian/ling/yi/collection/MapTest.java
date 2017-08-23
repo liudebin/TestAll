@@ -138,4 +138,12 @@ public class MapTest extends AbstractTest{
 
         System.out.println(i >> 1);
     }
+
+    @Test
+    public void putTest() {
+        Map map = new HashMap() {{
+            put("key", "value");
+        }};
+        logger.info("{}", map.get("key"));
+    }
 }

@@ -14,4 +14,14 @@ public class LongEvent {
     {
         this.value = value;
     }
+    public long get() {
+        return value;
+    }
+
+    @Override
+    public String toString() {
+        return "LongEvent{" +
+                "value=" + value +
+                '}';
+    }
 }
