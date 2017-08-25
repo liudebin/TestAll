@@ -1,0 +1,32 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+    　　  <pattern>%-4relative %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{100} [%line]  - %msg%n</pattern>
+    　　</encoder>
+    　</appender>
+
+    <!--子节点catch到的日志，不会被root获取-->
+    <!--<logger name="qian" additivity="false">-->
+
+    <!--子节点catch到的日志，会被父节点获取，不考虑父节点的日志级别，如果都有appender 都会打印。-->
+    <logger name="qian" >
+        <level value="INFO" />
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+    <logger name="qian.ling.yi" >
+        <level value="INFO" />
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+    <!--类是最终节点-->
+    <logger name="qian.ling.yi.ext.LogBack.LoggerTest" >
+        <level value="DEBUG" />
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+    <!--是所有logger的父类，如果子节点没有定义日志级别，则继承root的，如果定义了，所有能被子节点获取的日志，root都能获取到。-->
+    <root level="ERROR">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

@@ -3,6 +3,7 @@ package qian.ling.yi.ext.hystrix.wangyou;
 import com.netflix.hystrix.HystrixCommandGroupKey;
 import com.netflix.hystrix.HystrixObservableCommand;
 import com.netflix.hystrix.exception.HystrixRuntimeException;
+import org.junit.Test;
 import rx.Observable;
 import rx.Observer;
 import rx.Subscriber;
@@ -69,7 +70,7 @@ public class HystrixObservableCommand4FailsFastTest extends HystrixObservableCom
 
     public static class UnitTest {
 
-//        @Test
+        @Test
         public void testSuccess() {
         	Observable<String> hotObservable = new HystrixObservableCommand4FailsFastTest(false).observe();
         	hotObservable.subscribe(new Observer<String>() {

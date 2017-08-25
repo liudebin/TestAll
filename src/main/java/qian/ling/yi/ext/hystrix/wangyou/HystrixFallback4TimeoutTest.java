@@ -2,6 +2,7 @@ package qian.ling.yi.ext.hystrix.wangyou;
 
 import com.netflix.hystrix.HystrixCommand;
 import com.netflix.hystrix.HystrixCommandGroupKey;
+import org.junit.Test;
 
 import java.util.concurrent.TimeUnit;
 
@@ -9,11 +10,7 @@ import static org.junit.Assert.assertEquals;
 
 /**
  * 
- * 以下四种情况将触发getFallback调用：
- * 1）run()方法抛出非HystrixBadRequestException异常
- * 2）run()方法调用超时
- * 3）熔断器开启拦截调用
- * 4）线程池/队列/信号量是否跑满
+ * 默认等待1s
  */
 public class HystrixFallback4TimeoutTest extends HystrixCommand<String> {
 
@@ -49,7 +46,7 @@ public class HystrixFallback4TimeoutTest extends HystrixCommand<String> {
 
     public static class UnitTest {
 
-//        @Test
+        @Test
         public void testSynchronous() {
         	try {
         		assertEquals("fallback: Hlx", new HystrixFallback4ExceptionTest("Hlx").execute());

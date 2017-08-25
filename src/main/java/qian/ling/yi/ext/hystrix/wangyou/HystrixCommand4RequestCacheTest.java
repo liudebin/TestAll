@@ -3,6 +3,7 @@ package qian.ling.yi.ext.hystrix.wangyou;
 import com.netflix.hystrix.HystrixCommand;
 import com.netflix.hystrix.HystrixCommandGroupKey;
 import com.netflix.hystrix.strategy.concurrency.HystrixRequestContext;
+import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -25,6 +26,7 @@ public class HystrixCommand4RequestCacheTest extends HystrixCommand<Boolean> {
     // 返回结果是cache的value
     @Override
     protected Boolean run() {
+        System.out.println("run");
         return value == 0 || value % 2 == 0;
     }
 
@@ -33,10 +35,10 @@ public class HystrixCommand4RequestCacheTest extends HystrixCommand<Boolean> {
     protected String getCacheKey() {
         return String.valueOf(value) + value1;
     }
-
+//
     public static class UnitTest {
 
-//        @Test
+        @Test
         public void testWithoutCacheHits() {
             HystrixRequestContext context = HystrixRequestContext.initializeContext();
             try {
@@ -49,7 +51,7 @@ public class HystrixCommand4RequestCacheTest extends HystrixCommand<Boolean> {
             }
         }
 
-//        @Test
+        @Test
         public void testWithCacheHits() {
             HystrixRequestContext context = HystrixRequestContext.initializeContext();
             try {
@@ -73,6 +75,7 @@ public class HystrixCommand4RequestCacheTest extends HystrixCommand<Boolean> {
 
             // start a new request context
             context = HystrixRequestContext.initializeContext();
+//            context.close();
             try {
                 HystrixCommand4RequestCacheTest command3a = new HystrixCommand4RequestCacheTest(2,"HLX");
                 HystrixCommand4RequestCacheTest command3b = new HystrixCommand4RequestCacheTest(2,"HLX");

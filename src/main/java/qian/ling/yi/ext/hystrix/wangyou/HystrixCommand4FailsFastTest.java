@@ -3,6 +3,7 @@ package qian.ling.yi.ext.hystrix.wangyou;
 import com.netflix.hystrix.HystrixCommand;
 import com.netflix.hystrix.HystrixCommandGroupKey;
 import com.netflix.hystrix.exception.HystrixRuntimeException;
+import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
@@ -35,7 +36,7 @@ public class HystrixCommand4FailsFastTest extends HystrixCommand<String> {
             assertEquals("success", new HystrixCommand4FailsFastTest(false).execute());
         }
 
-//        @Test
+        @Test
         public void testFailure() {
             try {
                 new HystrixCommand4FailsFastTest(true).execute();

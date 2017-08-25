@@ -3,7 +3,6 @@ package qian.ling.yi.ext.hystrix.wangyou;
 import com.netflix.hystrix.*;
 import com.netflix.hystrix.HystrixCommandProperties.ExecutionIsolationStrategy;
 import org.junit.Test;
-import qian.ling.yi.ext.hystrix.wangyou.basic.HelloWorldHystrixCommand;
 
 import java.io.IOException;
 import java.util.Map;
@@ -19,15 +18,17 @@ public class HystrixCommand4SemaphoreTest extends HystrixCommand<String> {
     private final String name;
 
     public HystrixCommand4SemaphoreTest(String name) {
-        super(Setter.withGroupKey(HystrixCommandGroupKey.Factory.asKey("SemaphoreTestGroup"))  
-                .andCommandKey(HystrixCommandKey.Factory.asKey("SemaphoreTestKey"))
-                .andThreadPoolKey(HystrixThreadPoolKey.Factory.asKey("SemaphoreTestThreadPoolKey"))
-                .andCommandPropertiesDefaults(	// 配置信号量隔离
-                		HystrixCommandProperties.Setter()
-                		.withExecutionIsolationStrategy(ExecutionIsolationStrategy.SEMAPHORE)	// 信号量隔离
-                		.withExecutionIsolationSemaphoreMaxConcurrentRequests(3)
-                		.withFallbackIsolationSemaphoreMaxConcurrentRequests(1)
-                )
+        super(Setter
+						.withGroupKey(HystrixCommandGroupKey.Factory.asKey("SemaphoreTestGroup"))
+                		.andCommandKey(HystrixCommandKey.Factory.asKey("SemaphoreTestKey"))
+                		.andThreadPoolKey(HystrixThreadPoolKey.Factory.asKey("SemaphoreTestThreadPoolKey"))
+                		.andCommandPropertiesDefaults(	// 配置信号量隔离
+                			HystrixCommandProperties
+									.Setter()
+                				.withExecutionIsolationStrategy(ExecutionIsolationStrategy.SEMAPHORE)	// 信号量隔离
+                				.withExecutionIsolationSemaphoreMaxConcurrentRequests(3)
+                				.withFallbackIsolationSemaphoreMaxConcurrentRequests(1)
+                		)
              // 设置了信号量隔离后，线程池配置将变无效
 //                .andThreadPoolPropertiesDefaults(	
 //                		HystrixThreadPoolProperties.Setter()
@@ -61,9 +62,9 @@ public class HystrixCommand4SemaphoreTest extends HystrixCommand<String> {
 //	                    @Override  
 	                    public void run() {
 	                    	// 这里执行两类command：HystrixCommand4SemaphoreTest设置了信号量隔离、HelloWorldHystrixCommand未设置信号量
-	                        System.out.println("-----------" + new HelloWorldHystrixCommand("HLX" + j).execute());
+//	                        System.out.println("-----------" + new HelloWorldHystrixCommand("HLX" + j).execute());
 	                        System.out.println("===========" + new HystrixCommand4SemaphoreTest("HLX" + j).execute());	// 被信号量拒绝的线程从这里抛出异常
-	                        System.out.println("-----------" + new HelloWorldHystrixCommand("HLX" + j).execute());	// 被信号量拒绝的线程不能执行到这里
+//	                        System.out.println("-----------" + new HelloWorldHystrixCommand("HLX" + j).execute());	// 被信号量拒绝的线程不能执行到这里
 	                        
 	                    }  
 	                });  

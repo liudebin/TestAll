@@ -39,6 +39,7 @@ public class HelloWorldHystrixCollapser extends HystrixCollapser<List<String>, S
         for (CollapsedRequest<String, Integer> request : requests) {
             request.setResponse(batchResponse.get(count++));
         }
+        System.out.println(count);
     }
 
     // command类
@@ -46,7 +47,8 @@ public class HelloWorldHystrixCollapser extends HystrixCollapser<List<String>, S
         private final Collection<CollapsedRequest<String, Integer>> requests;
 
         private BatchCommand(Collection<CollapsedRequest<String, Integer>> requests) {
-            super(Setter.withGroupKey(HystrixCommandGroupKey.Factory.asKey("CollepsingGroup"))
+            super(Setter
+                    .withGroupKey(HystrixCommandGroupKey.Factory.asKey("CollepsingGroup"))
                     .andCommandKey(HystrixCommandKey.Factory.asKey("CollepsingKey")));
             this.requests = requests;
         }

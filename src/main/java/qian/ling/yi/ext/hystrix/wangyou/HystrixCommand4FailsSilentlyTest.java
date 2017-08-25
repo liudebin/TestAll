@@ -1,7 +1,9 @@
 package qian.ling.yi.ext.hystrix.wangyou;
+
 import com.netflix.hystrix.HystrixCommand;
 import com.netflix.hystrix.HystrixCommandGroupKey;
 import com.netflix.hystrix.exception.HystrixRuntimeException;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -47,7 +49,7 @@ public class HystrixCommand4FailsSilentlyTest extends HystrixCommand<List<String
             assertEquals("success", new HystrixCommand4FailsSilentlyTest(false).execute().get(0));
         }
 
-//        @Test
+        @Test
         public void testFailure() {
             try {
                 assertEquals(0, new HystrixCommand4FailsSilentlyTest(true).execute().size());
