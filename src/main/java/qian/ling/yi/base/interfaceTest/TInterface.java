@@ -7,6 +7,6 @@ package qian.ling.yi.base.interfaceTest;
  * @date 2017/4/12
  */
 
-public interface TInterface {
+public interface TInterface extends TT{
     String s = "123";
 }

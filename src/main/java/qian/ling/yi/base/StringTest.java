@@ -3,6 +3,8 @@ package qian.ling.yi.base;
 import org.junit.Test;
 import qian.ling.yi.AbstractTest;
 
+import java.util.Arrays;
+
 /**
  * Created by liuguobin on 2016/10/12.
  */
@@ -77,9 +79,10 @@ public class StringTest extends AbstractTest{
         logger.info("{}", a.substring(1, 2));
 //        logger.info("{}", a.substring(a.indexOf("e")));
 
-        a = "afileId1234";
+//        a = "afileId1234";
+        a = "afileId";
         String [] ha = a.split("fileId");
-        System.out.println();
+        System.out.println(Arrays.toString(ha));
     }
 
     /**
@@ -155,4 +158,42 @@ public class StringTest extends AbstractTest{
 
     }
 
+    @Test
+    public void concat() {
+        String a = "a";
+        String b = "b";
+        a.concat(b);
+
+    }
+
+    @Test
+    public void refer() {
+        String a = "a";
+        String b = a;
+        a = "b";
+        System.out.println(a + b);
+    }
+
+    @Test
+    public void numRefer() {
+        Long  a = 1l;
+        Long b = a;
+        a = 2L;
+        System.out.println( a);
+        System.out.println( b);
+    }
+
+    @Test
+    public void testObjectRefer() {
+        Base a = new Base();
+        a.i = 2;
+        Base b = a;
+        a = new Base();
+        System.out.println(a.i);
+        System.out.println(b.i);
+    }
+
+    class Base{
+        public int i ;
+    }
 }

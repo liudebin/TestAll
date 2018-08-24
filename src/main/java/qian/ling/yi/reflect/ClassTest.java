@@ -1,7 +1,9 @@
-package qian.ling.yi.base;
+package qian.ling.yi.reflect;
 
 import org.junit.Test;
 import qian.ling.yi.AbstractTest;
+import qian.ling.yi.base.interfaceTest.TImpl;
+import qian.ling.yi.base.interfaceTest.TInterface;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -33,6 +35,29 @@ public class ClassTest extends AbstractTest {
         logger.info("{}", LinkedList.class.isAssignableFrom(tmp.getClass()));
         logger.info("{}", ArrayList.class.isAssignableFrom(tmp.getClass()));
 
+    }
+
+
+    /**
+     * 返回直接实现的接口，包含泛型信息
+     */
+    @Test
+    public void testGetGenericInterfaces() {
+        String A = "A";
+        System.out.println(A.getClass().getGenericInterfaces().length);
+
+        TInterface t = new TInterface(){
+
+        };
+        System.out.println(t.getClass().getGenericInterfaces().length);
+        System.out.println(t.getClass().getGenericInterfaces()[0].getTypeName());
+
+        TImpl t1 = new TImpl();
+        System.out.println(t1.getClass().getGenericInterfaces().length);
+        System.out.println(t1.getClass().getGenericInterfaces()[0].getTypeName());
+
+        Object o = new Object();
+        System.out.println(o.getClass().getGenericInterfaces().length);
     }
 
 }

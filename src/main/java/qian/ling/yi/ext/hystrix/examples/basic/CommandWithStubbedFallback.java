@@ -46,7 +46,7 @@ public class CommandWithStubbedFallback extends HystrixCommand<CommandWithStubbe
 
     @Override
     protected UserAccount run() {
-        // fetch UserAccount from remote service
+        // fetch UserAccount from remote services
         //        return UserAccountClient.getAccount(customerId);
         throw new RuntimeException("forcing failure for example");
     }
@@ -56,7 +56,7 @@ public class CommandWithStubbedFallback extends HystrixCommand<CommandWithStubbe
         /**
          * Return stubbed fallback with some static defaults, placeholders,
          * and an injected value 'countryCodeFromGeoLookup' that we'll use
-         * instead of what we would have retrieved from the remote service.
+         * instead of what we would have retrieved from the remote services.
          */
         return new UserAccount(customerId, "Unknown Name",
                 countryCodeFromGeoLookup, true, true, false);

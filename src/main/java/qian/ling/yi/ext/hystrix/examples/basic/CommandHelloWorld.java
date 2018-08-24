@@ -45,6 +45,7 @@ public class CommandHelloWorld extends HystrixCommand<String> {
         // 依赖逻辑封装在run()方法中
         try {
 //            Thread.sleep(950L);
+//            Thread.sleep(10000L);
             Thread.sleep(100L);
             System.out.println("run");
         } catch (InterruptedException e) {
@@ -70,9 +71,12 @@ public class CommandHelloWorld extends HystrixCommand<String> {
 
         @Test
         public void testAsynchronous1() throws Exception {
-//            queue = toObservable().toBlocking().toFuture()
-            assertEquals("Hello World!", new CommandHelloWorld("World").queue().get());
-            assertEquals("Hello Bob!", new CommandHelloWorld("Bob").queue().get());
+            final Future<String> world = new CommandHelloWorld("World").queue();
+//            System.out.println("跑完");
+            System.out.println(world.get());
+//
+//            assertEquals("Hello World!", new CommandHelloWorld("World").queue().get());
+//            assertEquals("Hello Bob!", new CommandHelloWorld("Bob").queue().get());
         }
 
         @Test

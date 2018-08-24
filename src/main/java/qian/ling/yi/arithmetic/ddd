@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.ljb.web</groupId>
+		<artifactId>ljb-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<artifactId>ljb-web</artifactId>
+	<packaging>war</packaging>
+	<name>ljb :: Module :: web</name>
+
+	<!-- 依赖项定义 -->
+	<dependencies>
+		<!-- httpclient http访问工具 -->
+		<dependency>
+		    <groupId>commons-httpclient</groupId>
+		    <artifactId>commons-httpclient</artifactId>
+		    <version>3.1</version>
+		    <exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+		</exclusions>
+		</dependency>
+		<dependency>
+		  <groupId>com.jcraft</groupId>
+		  <artifactId>jsch</artifactId>
+		  <version>0.1.42</version>
+		</dependency>
+		<!-- FairylandJDP -->
+		<dependency>
+			<groupId>com.fairyland.jdp</groupId>
+			<artifactId>FairylandJDP-core</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>com.fairyland.jdp</groupId>
+			<artifactId>FairylandJDP-mybatis</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<!-- jedis方式连接redis -->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			 <version>2.1.0</version>
+		</dependency>
+		<!-- sql语法解释器 mybatis项目要求使用 com.github.jsqlparser -->
+		<dependency>
+			<groupId>com.github.jsqlparser</groupId>
+			<artifactId>jsqlparser</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+
+		<!-- mybaits -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-ehcache</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis.generator</groupId>
+			<artifactId>mybatis-generator-core</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<!-- mybatis -->
+
+		<!-- ftp -->
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<!-- 导入导出 start -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<!-- 导入导出 end -->
+		<!-- commons-dbcp -->
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+
+		<!-- 动态生成实体bean -->
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib-nodep</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>org.apache.ant</groupId>
+			<artifactId>ant</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+
+		<!-- 上传下载 start -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<!-- 上传下载 end -->
+
+		<!-- 邮件发送start -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<!-- 邮件发送end -->
+
+		<!-- AOP begin -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<!--<optional>true</optional>-->
+			<scope>runtime</scope>
+		</dependency>
+		<!-- AOP end -->
+
+		<!-- PERSISTENCE begin -->
+		<!-- hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<!--<optional>true</optional>-->
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<!--<optional>true</optional>-->
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- spring data access -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<!--<optional>true</optional>-->
+			<exclusions>
+				<exclusion>
+					<groupId>junit</groupId>
+					<artifactId>junit-dep</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+
+		<!-- connection pool -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jdbc</artifactId>
+			<!--<optional>true</optional>-->
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- PERSISTENCE end -->
+
+		<!-- WEB begin -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+
+		<dependency>
+			<groupId>opensymphony</groupId>
+			<artifactId>sitemesh</artifactId>
+			<!--<optional>true</optional>-->
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<!--<optional>true</optional>-->
+			<scope>provided</scope>
+		</dependency>
+		<!-- WEB end -->
+
+
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<!-- SECURITY begin -->
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-spring</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-ehcache</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-core</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-web</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache-core</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<!-- SECURITY end -->
+
+		<!-- JSR303 BeanValidator -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+
+		<!-- JSON begin -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.module</groupId>
+			<artifactId>jackson-module-jaxb-annotations</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<!-- JSON end -->
+
+		<!-- XML end -->
+		<dependency>
+			<groupId>com.thoughtworks.xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<!-- XML end -->
+
+		<!-- LOGGING begin -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<!--<optional>true</optional>-->
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- 代码直接调用log4j会被桥接到slf4j -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>log4j-over-slf4j</artifactId>
+			<!--<optional>true</optional>-->
+			<scope>runtime</scope>
+		</dependency>
+		<!-- 代码直接调用common-logging会被桥接到slf4j -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<!--<optional>true</optional>-->
+			<scope>runtime</scope>
+		</dependency>
+		<!-- 代码直接调用java.util.logging会被桥接到slf4j -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jul-to-slf4j</artifactId>
+			<!--<optional>true</optional>-->
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.bgee.log4jdbc-log4j2</groupId>
+			<artifactId>log4jdbc-log4j2-jdbc4</artifactId>
+			<!--<optional>true</optional>-->
+			<scope>runtime</scope>
+		</dependency>
+		<!-- LOGGING end -->
+
+		<!-- GENERAL UTILS begin -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>net.sf.ezmorph</groupId>
+			<artifactId>ezmorph</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<!-- GENERAL UTILS end -->
+
+		<!-- TEST begin -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.fairyland.jdp</groupId> -->
+<!-- 			<artifactId>FairylandJDP-test</artifactId> -->
+<!-- 			<optional>true</optional> -->
+<!-- 			<scope>test</scope> -->
+<!-- 		</dependency> -->
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<!--<optional>true</optional>-->
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<!--<optional>true</optional>-->
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<!--<optional>true</optional>-->
+			<scope>test</scope>
+		</dependency>
+
+		<!-- selenium 2.0 -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<!--<optional>true</optional>-->
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.seleniumhq.selenium</groupId>
+					<artifactId>selenium-htmlunit-driver</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.seleniumhq.selenium</groupId>
+					<artifactId>selenium-android-driver</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.seleniumhq.selenium</groupId>
+					<artifactId>selenium-iphone-driver</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.seleniumhq.selenium</groupId>
+					<artifactId>selenium-safari-driver</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-remote-driver</artifactId>
+			<!--<optional>true</optional>-->
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>cglib</groupId>
+					<artifactId>cglib-nodep</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- h2 -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<!--<optional>true</optional>-->
+			<scope>test</scope>
+		</dependency>
+
+		<!-- jetty -->
+		<dependency>
+			<groupId>org.eclipse.jetty.aggregate</groupId>
+			<artifactId>jetty-webapp</artifactId>
+			<!--<optional>true</optional>-->
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-jsp</artifactId>
+			<!--<optional>true</optional>-->
+			<scope>test</scope>
+		</dependency>
+		<!-- TEST end -->
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+
+		<!-- 支持activiti缓存 -->
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+
+		<!-- spring3.1 自己实现与ehcache的整合 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz-jobs</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+
+		<dependency>
+  			<groupId>ojdbc6</groupId>
+  			<artifactId>ojdbc6</artifactId>
+  			<!--<optional>true</optional>-->
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+
+		<dependency>
+			<groupId>net.sourceforge.jexcelapi</groupId>
+			<artifactId>jxl</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+
+		<dependency>
+			<groupId>jp.sourceforge</groupId>
+			<artifactId>QRCode</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+
+		<dependency>
+  			<groupId>org.jbarcode</groupId>
+  			<artifactId>jbarcode</artifactId>
+  			<!--<optional>true</optional>-->
+		</dependency>
+		<dependency>
+			<groupId>net.sf</groupId>
+			<artifactId>json-lib</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+
+		<dependency>
+	       <groupId>org.apache.solr</groupId>
+	       <artifactId>solr-solrj</artifactId>
+	       <optional>true</optional>
+		</dependency>
+
+		<!-- <dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpclient</artifactId>
+		    <optional>true</optional>
+		</dependency> -->
+
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpcore</artifactId>
+		    <!--<optional>true</optional>-->
+		</dependency>
+
+		<dependency>
+		    <groupId>javax.validation</groupId>
+		    <artifactId>validation-api</artifactId>
+		    <!--<optional>true</optional>-->
+		</dependency>
+
+		<!-- jdbc -->
+		<dependency>
+			<groupId>commons-dbutils</groupId>
+			<artifactId>commons-dbutils</artifactId>
+			<!--<optional>true</optional>-->
+		</dependency>
+       <dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<optional>true</optional>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- 百度云推送 -->
+		<dependency>
+		    <groupId>cn.featherfly</groupId>
+		    <artifactId>bccs-api</artifactId>
+		    <version>3.0.1</version>
+		    <optional>true</optional>
+		    <exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+			<!-- 极光推送 -->
+			<dependency>
+		        <groupId>io.netty</groupId>
+		        <artifactId>netty-all</artifactId>
+		        <!--<optional>true</optional>-->
+		        <scope>compile</scope>
+		    </dependency>
+		    <dependency>
+		        <groupId>com.google.code.gson</groupId>
+		        <artifactId>gson</artifactId>
+		        <!--<optional>true</optional>-->
+		    </dependency>
+		     <dependency>
+	            <groupId>com.squareup.okhttp</groupId>
+	            <artifactId>mockwebserver</artifactId>
+	            <!--<optional>true</optional>-->
+	            <scope>test</scope>
+        	</dependency>
+		    <dependency>
+			    <groupId>cn.jpush.api</groupId>
+			    <artifactId>jpush-client</artifactId>
+			    <!--<optional>true</optional>-->
+			</dependency>
+			<dependency>
+	            <groupId>cn.jpush.api</groupId>
+	            <artifactId>jiguang-common</artifactId>
+	            <!--<optional>true</optional>-->
+	        </dependency>
+			<dependency>
+		         <groupId>com.alipay</groupId>
+		         <artifactId>sdk-java</artifactId>
+		        <!--  <optional>true</optional>-->
+		   </dependency>
+
+		   <dependency>
+            <groupId>org.apache.axis</groupId>
+            <artifactId>axis</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-discovery</groupId>
+            <artifactId>commons-discovery</artifactId>
+            <version>0.2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.axis</groupId>
+            <artifactId>axis-jaxrpc</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.axis</groupId>
+            <artifactId>axis-saaj</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>wsdl4j</groupId>
+            <artifactId>wsdl4j</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- compiler插件, 设定JDK版本 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+					<showWarnings>true</showWarnings>
+				</configuration>
+			</plugin>
+
+			<!-- war打包插件, 设定war包名称不带版本号 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<warName>${project.artifactId}</warName>
+					<!-- <dependentWarExcludes>WEB-INF/lib/*</dependentWarExcludes> -->
+					<overlays>
+						<!-- <overlay> -->
+						<!-- <groupId>com.fairyland.jdp</groupId> -->
+						<!-- <artifactId>FairylandJDP-bpm</artifactId> -->
+						<!-- </overlay> -->
+						<!-- <overlay> empty groupId/artifactId represents the current build
+							</overlay> -->
+					</overlays>
+					<!-- <dependentWarExcludes>WEB-INF/lib/*,/application.properties,/META-INF/*</dependentWarExcludes> -->
+				</configuration>
+			</plugin>
+
+			<!-- test插件, 仅测试名称为*Test的类,使用支持分组测试的surefire-junit47 driver -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.15</version>
+				<configuration>
+					<includes>
+						<include>**/*Test.java</include>
+					</includes>
+					<argLine>-Xmx256M</argLine>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.surefire</groupId>
+						<artifactId>surefire-junit47</artifactId>
+						<version>2.15</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+			<!-- 增加functional test的Source目录 -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+			</plugin>
+
+			<!-- cobertura插件, 设置不需要计算覆盖率的类 -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<configuration>
+					<instrumentation>
+						<excludes>
+							<exclude>**/entity/**/*.class</exclude>
+							<exclude>**/*Controller.class</exclude>
+						</excludes>
+					</instrumentation>
+				</configuration>
+			</plugin>
+
+			<!-- enforcer插件, 设定环境与依赖的规则 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+			</plugin>
+
+			<!-- jetty插件, 设定context path与spring profile -->
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<configuration>
+					<systemProperties>
+						<systemProperty>
+							<name>spring.profiles.active</name>
+							<value>development</value>
+						</systemProperty>
+					</systemProperties>
+					<useTestClasspath>true</useTestClasspath>
+
+					<webAppConfig>
+						<contextPath>/${project.artifactId}</contextPath>
+					</webAppConfig>
+				</configuration>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.1</version>
+			</plugin>
+
+			<!-- resource插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+			</plugin>
+
+			<!-- install插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+			</plugin>
+
+			<!-- clean插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+			</plugin>
+
+			<!-- ant插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+			</plugin>
+
+			<!-- dependency插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+			</plugin>
+		</plugins>
+		 <resources>
+		    <resource>
+		        <directory>src/main/resources</directory>
+		    </resource>
+		    <resource>
+		        <directory>src/main/java</directory>
+		        <includes>
+		            <include>**/*.xml</include>
+		            <include>**/*.properties</include>
+		        </includes>
+		        <filtering>false</filtering>
+		    </resource>
+		</resources>
+	</build>
+
+	<profiles>
+		<!-- 执行functional test -->
+		<profile>
+			<id>functional-test</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<argLine>-Xmx256M -XX:MaxPermSize=128m</argLine>
+							<includes>
+								<include>**/*FT.java</include>
+							</includes>
+							<!-- 支持taglib tld文件查找的必要设置 -->
+							<useSystemClassLoader>false</useSystemClassLoader>
+							<!-- 将mvn命令行传入的selenium driver参数传入surefire的JVM -->
+							<systemPropertyVariables>
+								<selenium.driver>${selenium.driver}</selenium.driver>
+							</systemPropertyVariables>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<!-- 执行@Category(Smoke.class)的TestCase -->
+		<profile>
+			<id>run-smoke</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<groups>com.fairyland.jdp.test.category.Smoke</groups>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<!-- 刷新开发环境数据库 -->
+		<profile>
+			<id>refresh-db</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<configuration>
+							<target>
+								<property
+									file="src/main/resources/application.development.properties" />
+								<property file="src/main/resources/application.properties" />
+								<sql driver="${jdbc.driver}" url="${jdbc.url}" userid="${jdbc.username}"
+									password="${jdbc.password}" onerror="continue"
+									encoding="${project.build.sourceEncoding}">
+									<classpath refid="maven.test.classpath" />
+
+									<!-- activit start <transaction src="src/main/resources/sql/${sql.catalog}/create/engine.sql"
+										/> <transaction src="src/main/resources/sql/${sql.catalog}/create/history.sql"
+										/> <transaction src="src/main/resources/sql/${sql.catalog}/create/identity.sql"
+										/> -->
+									<!-- activit end -->
+									<transaction src="src/main/resources/sql/${sql.catalog}/schema.sql" />
+									<transaction
+										src="src/test/resources/data/${sql.catalog}/import-data.sql" />
+								</sql>
+							</target>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>

@@ -4,6 +4,7 @@
     <file type="web" url="file://$PROJECT_DIR$" />
     <type id="Spring" />
   </component>
+  <component name="GOROOT" path="/usr/local/go" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>

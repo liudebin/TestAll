@@ -19,7 +19,7 @@ import com.netflix.hystrix.HystrixCommand;
 import com.netflix.hystrix.HystrixCommandGroupKey;
 
 /**
- * Sample HystrixCommand simulating one that would fetch Order objects from a remote service or database.
+ * Sample HystrixCommand simulating one that would fetch Order objects from a remote services or database.
  * <p>
  * This fails fast with no fallback and does not use request caching.
  */
@@ -56,7 +56,7 @@ public class GetOrderCommand extends HystrixCommand<Order> {
             }
         }
 
-        /* success ... create Order with data "from" the remote service response */
+        /* success ... create Order with data "from" the remote services response */
         return new Order(orderId);
     }
 

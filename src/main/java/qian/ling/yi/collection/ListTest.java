@@ -80,4 +80,10 @@ public class ListTest extends AbstractTest {
         logger.info("{}", s.contains("s"));
         logger.info("{}", s.contains(null));
     }
+
+
+    @Test
+    public void listIterator() {
+        List<String> s = new ArrayList<>(16);
+    }
 }

@@ -21,7 +21,7 @@ import com.netflix.hystrix.HystrixCommandGroupKey;
 import java.net.HttpCookie;
 
 /**
- * Sample HystrixCommand simulating one that would fetch UserAccount objects from a remote service or database.
+ * Sample HystrixCommand simulating one that would fetch UserAccount objects from a remote services or database.
  * <p>
  * This uses request caching and fallback behavior.
  */
@@ -67,7 +67,7 @@ public class GetUserAccountCommand extends HystrixCommand<UserAccount> {
             }
         }
 
-        /* success ... create UserAccount with data "from" the remote service response */
+        /* success ... create UserAccount with data "from" the remote services response */
         return new UserAccount(86975, "John James", 2, true, false, true);
     }
 

@@ -3,6 +3,8 @@ package qian.ling.yi.thread;
 import org.junit.Test;
 import qian.ling.yi.AbstractTest;
 
+import java.io.IOException;
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -37,8 +39,8 @@ public class ReentrantLockTest extends AbstractTest{
         System.out.println("释放锁3");
         lock.unlock();
         System.out.println("释放锁2");
-//        lock.unlock();
-//        System.out.println("释放锁1");
+        lock.unlock();
+        System.out.println("释放锁1");
 
         new Thread(()->{
             System.out.println("尝试获取锁");
@@ -51,6 +53,55 @@ public class ReentrantLockTest extends AbstractTest{
             System.out.println("锁获取成功");
         }).start();
 
+    }
+
+
+    @Test
+    public void testReleaseError() {
+        ReentrantLock re = new ReentrantLock();
+        re.unlock();
+    }
+
+
+    @Test
+    public void test() throws IOException {
+        ReentrantLock re = new ReentrantLock();
+        System.out.println(re.getHoldCount());
+        re.lock();
+        System.out.println(re.getHoldCount());
+        re.lock();
+        System.out.println(re.getHoldCount());
+        System.out.println(re.tryLock());
+        new Thread(()-> {
+            re.lock();
+            System.out.println("锁成功");
+        }).start();
+        System.in.read();
+
+    }
+
+
+    @Test
+    public void testCondition() throws InterruptedException {
+        ReentrantLock re = new ReentrantLock();
+        final Condition condition = re.newCondition();
+
+        System.out.println(re.getQueueLength());
+        new Thread(() -> {
+            try {
+                re.lock();
+                Thread.sleep(5000);
+                condition.await();
+                System.out.println("nima");
+
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
+
+        Thread.sleep(10000);
+        re.lock();
+        System.out.println(re.getQueueLength());
     }
 
 }

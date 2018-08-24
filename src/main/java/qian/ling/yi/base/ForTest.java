@@ -11,6 +11,9 @@ import java.util.concurrent.atomic.AtomicLong;
  * Created by liuguobin on 2016/11/3.
  */
 public class ForTest extends AbstractTest {
+    int i = 0;
+    int i1 = 1;
+    int i2 = 2;
     private static final AtomicLong seedUniquifier
             = new AtomicLong(8682522807148012L);
 
@@ -32,9 +35,19 @@ public class ForTest extends AbstractTest {
     public void testNull() {
         List<String> list = null;
 //        爆空指针
-//        list.forEach(str -> logger.info(str));
+        list.forEach(str -> logger.info(str));
         for (int i = 0; i < list.size(); i ++) {
             logger.info(list.get(i));
+        }
+    }
+
+    /**
+     * hashMap 看到此种用法，新定义个变量
+     */
+    @Test
+    public void ttt() {
+        for (ForTest i = this, p;;) {
+
         }
     }
 }

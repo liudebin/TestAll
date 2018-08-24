@@ -8,6 +8,17 @@ package qian.ling.yi.base;
  */
 
 public class SuperClass {
+    static {
+        System.out.println("SuperClass static init");
+    }
+
+    public int i =3;
+    public SuperClass() {
+        System.out.println("SuperClass init");
+    }
+    public static void houha() {
+        System.out.println("houha");
+    }
     public String str;
 
     public Long l;

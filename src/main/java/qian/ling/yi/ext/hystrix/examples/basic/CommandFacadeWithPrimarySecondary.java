@@ -83,7 +83,7 @@ public class CommandFacadeWithPrimarySecondary extends HystrixCommand<String> {
 
         @Override
         protected String run() {
-            // perform expensive 'primary' service call
+            // perform expensive 'primary' services call
             return "responseFromPrimary-" + id;
         }
 
@@ -106,7 +106,7 @@ public class CommandFacadeWithPrimarySecondary extends HystrixCommand<String> {
 
         @Override
         protected String run() {
-            // perform fast 'secondary' service call
+            // perform fast 'secondary' services call
             return "responseFromSecondary-" + id;
         }
 

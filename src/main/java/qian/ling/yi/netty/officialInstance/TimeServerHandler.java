@@ -21,13 +21,13 @@ public class TimeServerHandler extends ChannelInboundHandlerAdapter {
         time.writeInt((int) (System.currentTimeMillis() / 1000L + 2208988800L));
 
         final ChannelFuture f = ctx.writeAndFlush(time); // (3)
-//        f.addListener(new ChannelFutureListener() {
-//            @Override
-//            public void operationComplete(ChannelFuture future) {
-//                assert f == future;
-//                ctx.close();
-//            }
-//        }); // (4)
+        f.addListener(new ChannelFutureListener() {
+            @Override
+            public void operationComplete(ChannelFuture future) {
+                assert f == future;
+                ctx.close();
+            }
+        }); // (4)
         f.addListener(ChannelFutureListener.CLOSE);
     }
 

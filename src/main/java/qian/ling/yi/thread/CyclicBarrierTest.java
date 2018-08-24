@@ -2,7 +2,6 @@ package qian.ling.yi.thread;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import qian.ling.yi.AbstractTest;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
@@ -24,7 +23,7 @@ public class CyclicBarrierTest {
 //            } catch (InterruptedException e) {
 //                e.printStackTrace();
 //            }
-            logger.info("最先执行");
+            logger.info("到齐了");
         });
         logger.info("{}", cyclicBarrier.getParties()); // 要求达到条件的await，在构造时设定的3 可以通过
         logger.info("waitingNum : {}", cyclicBarrier.getNumberWaiting());//当前在已经在等待的数量
@@ -39,14 +38,14 @@ public class CyclicBarrierTest {
             }
         });
         thread.start();
-//        try {
-//            Thread.sleep(1000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
 //        不是即时中断，不起作用
-        thread.interrupt();
+//        thread.interrupt();
 
         logger.info("waitingNum : {}", cyclicBarrier.getNumberWaiting());
 
@@ -78,8 +77,10 @@ public class CyclicBarrierTest {
 //            thread1.start();
 //        }
         try {
+            logger.info("要到齐了");
             cyclicBarrier.await();
-            logger.info("{}", cyclicBarrier.getNumberWaiting());
+            logger.info("{}", 3);
+            logger.info("{}", cyclicBarrier.getNumberWaiting()); // 到齐之后复原。
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (BrokenBarrierException e) {

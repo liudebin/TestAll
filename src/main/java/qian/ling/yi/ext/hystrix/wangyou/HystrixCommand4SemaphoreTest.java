@@ -12,6 +12,7 @@ import java.util.Map;
  * 默认执行run()用的是主线程，为了模拟并行执行command，这里我们自己创建多个线程来执行command
  * 设置ExecutionIsolationSemaphoreMaxConcurrentRequests为3，意味着信号量最多允许执行run的并发数为3，超过则触发降级，即不执行run而执行getFallback
  * 设置FallbackIsolationSemaphoreMaxConcurrentRequests为1，意味着信号量最多允许执行fallback的并发数为1，超过则抛异常fallback execution rejected
+ * 		Exception in thread "Thread-4" com.netflix.hystrix.exception.HystrixRuntimeException: SemaphoreTestKey fallback execution rejected.
  */
 public class HystrixCommand4SemaphoreTest extends HystrixCommand<String> {
 

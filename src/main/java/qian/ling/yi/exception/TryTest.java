@@ -7,10 +7,12 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * 测试异常处理
+ * 1. 可以try，但是不 catch Spring中有使用
  * Created by liuguobin on 2016/10/28.
  */
 public class TryTest extends AbstractTest {
 
+//    1.
     @Test
     public void testNoCatch() {
         ReentrantLock reentrantLock = new ReentrantLock();
@@ -36,5 +38,11 @@ public class TryTest extends AbstractTest {
         } finally {
             logger.info("{}", "finally");
         }
+    }
+
+
+    @Test
+    public void test() {
+        
     }
 }

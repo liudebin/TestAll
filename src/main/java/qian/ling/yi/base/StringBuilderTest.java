@@ -27,10 +27,17 @@ public class StringBuilderTest extends AbstractTest {
             logger.info(list.get(i).toString());
         }
     }
+
     public void test(List<StringBuilder> test) {
         for (int i = 0; i <test.size(); i ++) {
             StringBuilder sb = test.get(i);
             sb.append("i");
         }
+    }
+
+    @Test
+    public void testAppend() {
+        StringBuilder s = new StringBuilder("a");
+        s.append("s");
     }
 }

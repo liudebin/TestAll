@@ -27,7 +27,7 @@ public class TestTest extends AbstractTest {
              * @param event      published to the {@link RingBuffer}
              * @param sequence   of the event being processed
              * @param endOfBatch flag to indicate if this is the last event in a batch from the {@link RingBuffer}
-             * @throws Exception if the EventHandler would like the exception handled further up the chain.
+             * @throws Exception if the EventHandler would like the exception handled further up the chainSelf.
              */
             @Override
             public void onEvent(MyEvent event, long sequence, boolean endOfBatch) throws Exception {
@@ -40,7 +40,7 @@ public class TestTest extends AbstractTest {
              * @param event      published to the {@link RingBuffer}
              * @param sequence   of the event being processed
              * @param endOfBatch flag to indicate if this is the last event in a batch from the {@link RingBuffer}
-             * @throws Exception if the EventHandler would like the exception handled further up the chain.
+             * @throws Exception if the EventHandler would like the exception handled further up the chainSelf.
              */
             @Override
             public void onEvent(MyEvent event, long sequence, boolean endOfBatch) throws Exception {

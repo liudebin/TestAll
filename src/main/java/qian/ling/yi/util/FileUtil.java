@@ -21,4 +21,18 @@ public class FileUtil extends AbstractTest{
         }
     }
 
+    /**
+     * 根据文件路径，获取文件名称
+     * @param path
+     * @return
+     */
+    public static String getFileNameByPath(String path) {
+        if (StringUtil.isEmpty(path)) {
+            return path;
+        }
+        String[] fileNames = path.split(File.separator);
+        return fileNames[fileNames.length -1];
+    }
+
+
 }

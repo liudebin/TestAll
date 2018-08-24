@@ -128,8 +128,8 @@ public class CreditCardCommand extends HystrixCommand<CreditCardAuthorizationRes
             // handle all other errors
             return CreditCardAuthorizationResult.createFailedResponse(result.getReasonResponseCode() + " : " + result.getResponseText());
             /**
-             * NOTE that in this use case we do not throw an exception for an "error" as this type of error from the service is not a system error,
-             * but a legitimate usage problem successfully delivered back from the service.
+             * NOTE that in this use case we do not throw an exception for an "error" as this type of error from the services is not a system error,
+             * but a legitimate usage problem successfully delivered back from the services.
              * 
              * Unexpected errors will be allowed to throw RuntimeExceptions.
              * 

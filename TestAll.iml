@@ -25,6 +25,42 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/artSb" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/intro/chapter01/Exchanger_1" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/intro/chapter01/Exchanger_2" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/intro/chapter01/Exchanger_3" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/intro/chapter01/Semaphore_MoreToOne_1" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/intro/chapter01/Semaphore_MoreToOne_2" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/intro/chapter01/Semaphore_Pool_List" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/intro/chapter01/Semaphore_acquire(int permits)_release(int permits)/src" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/intro/chapter01/Semaphore_acquireUninterruptibly_1" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/intro/chapter01/Semaphore_acquireUninterruptibly_2" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/intro/chapter01/Semaphore_tryAcquire_1" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/intro/chapter01/Semaphore_tryAcquire_2" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/intro/chapter01/Semaphore_tryAcquire_3" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/intro/chapter01/Semaphore_tryAcquire_4" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/intro/chapter01/addPermitsCount" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/intro/chapter01/availablePermitsTest" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/intro/chapter01/drainPermitsTest" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/intro/chapter01/repastTest" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/intro/chapter01/semaphoreFairTest" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/book/intro/chapter01/twoMethodTest" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/thread/book/artSb" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/thread/book/intro/chapter01/Exchanger_2" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/thread/book/intro/chapter01/Exchanger_3" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/thread/book/intro/chapter01/Semaphore_MoreToOne_1" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/thread/book/intro/chapter01/Semaphore_MoreToOne_2" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/thread/book/intro/chapter01/Semaphore_Pool_List" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/thread/book/intro/chapter01/Semaphore_acquire(int permits)_release(int permits)" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/thread/book/intro/chapter01/Semaphore_acquireUninterruptibly_1" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/thread/book/intro/chapter01/Semaphore_acquireUninterruptibly_2" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/thread/book/intro/chapter01/Semaphore_tryAcquire_1" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/thread/book/intro/chapter01/Semaphore_tryAcquire_2" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/thread/book/intro/chapter01/Semaphore_tryAcquire_3" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/thread/book/intro/chapter01/Semaphore_tryAcquire_4" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/thread/book/intro/chapter01/repastTest" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/thread/book/intro/chapter01/semaphoreFairTest" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/qian/ling/yi/thread/book/intro/chapter01/twoMethodTest" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -59,6 +95,8 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-core:4.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-web:4.3.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:4.3.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.taobao.pamirs.schedule:tbschedule:3.3.3.2" level="project" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.4" level="project" />
     <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils-core:1.7.0" level="project" />
@@ -66,7 +104,6 @@
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.1" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.14" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba.rocketmq:rocketmq-client:3.6.2.Final" level="project" />
-    <orderEntry type="library" name="Maven: com.alibaba.rocketmq:rocketmq-all:3.6.2.Final" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-test:4.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-all:4.1.13.Final" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:23.0" level="project" />
@@ -77,8 +114,20 @@
     <orderEntry type="library" name="Maven: com.netflix.hystrix:hystrix-core:1.5.12" level="project" />
     <orderEntry type="library" name="Maven: com.netflix.archaius:archaius-core:0.4.1" level="project" />
     <orderEntry type="library" name="Maven: commons-configuration:commons-configuration:1.8" level="project" />
-    <orderEntry type="library" name="Maven: io.reactivex:rxjava:1.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.hdrhistogram:HdrHistogram:2.1.9" level="project" />
     <orderEntry type="library" name="Maven: com.lmax:disruptor:3.3.6" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy:2.4.5" level="project" />
+    <orderEntry type="library" name="Maven: io.reactivex:rxjava:1.3.2" level="project" />
+    <orderEntry type="library" name="Maven: org.javassist:javassist:3.22.0-GA" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.poi:poi-examples:3.9" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.poi:poi-scratchpad:3.9" level="project" />
+    <orderEntry type="library" name="Maven: fr.opensagres.xdocreport:org.apache.poi.xwpf.converter.xhtml:1.0.4" level="project" />
+    <orderEntry type="library" name="Maven: fr.opensagres.xdocreport:org.apache.poi.xwpf.converter.core:1.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.poi:poi-ooxml:3.9" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.poi:poi:3.9" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.poi:poi-ooxml-schemas:3.9" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.xmlbeans:xmlbeans:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: stax:stax-api:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.poi:ooxml-schemas:1.1" level="project" />
   </component>
 </module>
