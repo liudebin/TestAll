@@ -9,7 +9,7 @@ public class Testfuzhi {
     private final  String B ="B";
     private final static  String C ="C";
     private static final String D = "D";
-    private final static TestClass a = new TestClass();
+//    private final static TestClass a = new TestClass();
 
     static abstract class Parent {}
 

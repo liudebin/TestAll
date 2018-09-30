@@ -12,5 +12,10 @@
       http://www.springframework.org/schema/aop/spring-aop-4.0.xsd"
       >
     <!--qian.ling.yi.ext.tbSchedule,-->
-    <context:component-scan base-package="qian.ling.yi.ext.tbSchedule,qian.ling.yi.ext.spring" />
+    <!--<context:component-scan base-package="qian.ling.yi.ext.tbSchedule,qian.ling.yi.ext.spring" />-->
+    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+        <property name="providerClass" value="org.hibernate.validator.HibernateValidator"/>
+        <!--<property name="validationMessageSource" ref="messageSource"/>-->
+    </bean>
+
 </beans>

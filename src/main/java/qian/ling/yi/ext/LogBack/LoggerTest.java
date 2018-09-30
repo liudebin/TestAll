@@ -45,6 +45,6 @@ public class LoggerTest{
         Logger logger = LoggerFactory.getLogger(LoggerTest.class);
 //        Logger logger = LoggerFactory.getLogger("test1"); // 获取不存在的节点，会走root节点
         String h = null;
-        logger.debug("hha{}", h);
+        logger.info("hha{}", h);
     }
 }
