@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <kmodule xmlns="http://www.drools.org/xsd/kmodule">
-    <kbase name="helloWorldBase">
+    <kbase name="helloWorldBase"
+    >
+           <!--packages="nicai"-->
+        <!--packages 代表的是要被扫描的包，不包含，不扫描-->
         <ksession name="helloWorldSession"/>
     </kbase>
 </kmodule>

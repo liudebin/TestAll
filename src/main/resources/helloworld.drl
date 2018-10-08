@@ -1,8 +1,9 @@
-package helloworld;
+package helloworld; // 与java包无关
 
-rule "HelloWorld"
+rule "HelloWorld" // 唯一项
     when
-        eval(true)
+        eval(true)// 始终为真
+        //这里如果为空，则表示eval(true)
     then
-        System.out.println("HelloWorld");
+        System.out.println("HelloWorld"); // java语言
 end
