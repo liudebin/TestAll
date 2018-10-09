@@ -1,0 +1,322 @@
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Server version:        Apache Tomcat/7.0.91
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Server built:          Sep 13 2018 19:52:12 UTC
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Server number:         7.0.91.0
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.VersionLoggerListener log
+信息: OS Name:               Windows 10
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.VersionLoggerListener log
+信息: OS Version:            10.0
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Architecture:          amd64
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Java Home:             C:\Program Files\Java\jdk1.8.0_181\jre
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.VersionLoggerListener log
+信息: JVM Version:           1.8.0_181-b13
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.VersionLoggerListener log
+信息: JVM Vendor:            Oracle Corporation
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.VersionLoggerListener log
+信息: CATALINA_BASE:         D:/source/dubbo-admin-tomcat
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.VersionLoggerListener log
+信息: CATALINA_HOME:         D:/source/dubbo-admin-tomcat
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Djava.util.logging.config.file=D:/source/dubbo-admin-tomcat/conf/logging.properties
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Dignore.endorsed.dirs=
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Dcatalina.base=D:/source/dubbo-admin-tomcat
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Dcatalina.home=D:/source/dubbo-admin-tomcat
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Djava.io.tmpdir=D:/source/dubbo-admin-tomcat/temp
+十月 09, 2018 9:51:57 上午 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\liuguobin\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\liuguobin\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Git\cmd;D:\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;C:\Program Files\Java\jdk1.8.0_181\bi;C:\Program Files\Java\jdk1.8.0_181\jre\bin;.;C:\WINDOWS\System32\OpenSSH;C:\Python27;C:\Python27\Scripts;C:\Users\liuguobin\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;.
+十月 09, 2018 9:51:57 上午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-bio-8080"]
+十月 09, 2018 9:51:57 上午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["ajp-bio-8009"]
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 911 ms
+十月 09, 2018 9:51:57 上午 org.apache.catalina.core.StandardService startInternal
+信息: Starting service Catalina
+十月 09, 2018 9:51:57 上午 org.apache.catalina.core.StandardEngine startInternal
+信息: Starting Servlet Engine: Apache Tomcat/7.0.91
+十月 09, 2018 9:51:57 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory D:\source\dubbo-admin-tomcat\webapps\dubbo-admin
+十月 09, 2018 9:52:02 上午 org.apache.catalina.startup.TldConfig execute
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO: configuring "log4j" using jndi:/localhost/dubbo-admin/WEB-INF/log4j.xml
+ - with property localAddress = 192.168.1.128
+ - with property localHost = liuguobin-PC
+ - with property loggingCharset = UTF-8
+ - with property loggingLevel = INFO
+ - with property loggingRoot = C:\Users\liuguobin\logs
+
+ INFO context.ContextLoader - Root WebApplicationContext: initialization started
+ INFO context.WebxComponentsContext - Refreshing Root WebApplicationContext: startup date [Tue Oct 09 09:52:03 CST 2018]; root of context hierarchy
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/webx.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/webx-component-and-root.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/pipeline-exception.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/resources.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/uris.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/common/rewrite.xml]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/dubbo-admin.xml]
+ INFO logger.LoggerFactory - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+ INFO config.PropertyPlaceholderConfigurer - Loading properties file from Resource[/WEB-INF/dubbo.properties, loaded by ResourceLoadingService]
+ INFO config.PropertyPlaceholderConfigurer - Loading properties file from URL [file://C:/Users/liuguobin/dubbo.properties]
+ WARN config.PropertyPlaceholderConfigurer - Could not load properties from URL [file://C:/Users/liuguobin/dubbo.properties]: C
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO upload.UploadService - Upload Parameters: {
+  Repository Path                  = D:\source\dubbo-admin-tomcat\temp
+  Maximum Request Size             = 5M
+  Maximum File Size                = n/a
+  Threshold before Writing to File = 10K
+  Keep Form Field in Memory        = false
+  File Name Key                    = [
+                                       [1/1] filename
+                                     ]
+}
+ INFO context.WebxComponentsContext - Bean '(inner bean)#fd94d8' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentsContext - Bean 'dubbo-admin' of type [class com.alibaba.dubbo.config.ApplicationConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentsContext - Bean 'com.alibaba.dubbo.config.RegistryConfig' of type [class com.alibaba.dubbo.config.RegistryConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentsContext - Bean 'registryService' of type [class com.alibaba.dubbo.config.spring.ReferenceBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentsContext - Bean '(inner bean)#fd94d8' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@4de47c54: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,exceptionPipeline,resourceLoadingService,messageSource,uriBrokerService,restfulRewrite,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dubbo-admin,com.alibaba.dubbo.config.RegistryConfig,registryService,configService,consumerService,overrideService,ownerService,providerService,routeService,userService,governanceCache,productionModeSensiblePostProcessor,webxConfiguration,requestContexts,com.alibaba.citrus.service.requestcontext.impl.RequestContextBeanFactoryPostProcessor#0,uploadService,pullService,formService,module.screen.Error404,module.screen.ErrorOther,moduleLoaderService,messageResourceService,com.alibaba.citrus.webx.context.WebxComponentsLoader$WebxComponentsCreator,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/common/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO concurrent.ExecutionList -  [DUBBO] Executor for listenablefuture is null, will use default executor!, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO zkclient.ZkEventThread - Starting ZkClient event thread.
+ INFO zkclient.ZkClient - zookeeper state changed (SyncConnected)
+ INFO config.AbstractConfig -  [DUBBO] Refer dubbo service com.alibaba.dubbo.registry.RegistryService from url zookeeper://127.0.0.1:2181/com.alibaba.dubbo.registry.RegistryService?application=dubbo-admin&check=false&dubbo=2.0.1&file=false&pid=51248&refer=application%3Ddubbo-admin%26check%3Dfalse%26dubbo%3D2.0.1%26interface%3Dcom.alibaba.dubbo.registry.RegistryService%26methods%3Dlookup%2Cunsubscribe%2Csubscribe%2Cunregister%2Cregister%26pid%3D51248%26register.ip%3D192.168.1.128%26revision%3D2.0.1%26side%3Dconsumer%26timestamp%3D1539049935964&timestamp=1539049936027, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO sync.RegistryServerSync -  [DUBBO] Init Dubbo Admin Sync Cache..., dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO zookeeper.ZookeeperRegistry -  [DUBBO] Subscribe: admin://192.168.1.128?category=providers,consumers,routers,configurators&check=false&classifier=*&enabled=*&group=*&interface=*&version=*, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO zookeeper.ZookeeperRegistry -  [DUBBO] Subscribe: admin://192.168.1.128/qian.ling.yi.ext.dubbo.DemoService?category=providers,consumers,routers,configurators&check=false&classifier=*&enabled=*&group=*&interface=qian.ling.yi.ext.dubbo.DemoService&version=*, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO zookeeper.ZookeeperRegistry -  [DUBBO] Notify urls for subscribe url admin://192.168.1.128/qian.ling.yi.ext.dubbo.DemoService?category=providers,consumers,routers,configurators&check=false&classifier=*&enabled=*&group=*&interface=qian.ling.yi.ext.dubbo.DemoService&version=*, urls: [dubbo://192.168.1.128:20880/qian.ling.yi.ext.dubbo.DemoService?anyhost=true&application=demotest-provider&dubbo=2.5.4&generic=false&interface=qian.ling.yi.ext.dubbo.DemoService&methods=getPermissions&organization=dubbox&owner=programmer&pid=28768&side=provider&timestamp=1539049325047, consumer://192.168.1.128/qian.ling.yi.ext.dubbo.DemoService?application=demotest-consumer&category=consumers&check=false&dubbo=2.5.4&interface=qian.ling.yi.ext.dubbo.DemoService&methods=getPermissions&organization=dubbox&owner=programmer&pid=48812&side=consumer&timestamp=1539049333257, empty://192.168.1.128/qian.ling.yi.ext.dubbo.DemoService?category=routers&check=false&classifier=*&enabled=*&group=*&interface=qian.ling.yi.ext.dubbo.DemoService&version=*, empty://192.168.1.128/qian.ling.yi.ext.dubbo.DemoService?category=configurators&check=false&classifier=*&enabled=*&group=*&interface=qian.ling.yi.ext.dubbo.DemoService&version=*], dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService] with 16 pre-pulled tools, 10 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: sysmanage
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'sysmanage': startup date [Tue Oct 09 09:52:17 CST 2018]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-sysmanage.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#1afc525d' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#4f285f1' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#1afc525d' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@5d14508f: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.screen.Configs,module.screen.Privileges,module.screen.Userown,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@4de47c54
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/sysmanage/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.1] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: sysinfo
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'sysinfo': startup date [Tue Oct 09 09:52:19 CST 2018]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-sysinfo.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#5e987f30' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#46f710e5' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#5e987f30' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@75e3651a: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.screen.Dump,module.screen.Dumps,module.screen.Envs,module.screen.Logs,module.screen.Statuses,module.screen.Versions,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@4de47c54
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/sysinfo/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.2] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: personal
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'personal': startup date [Tue Oct 09 09:52:22 CST 2018]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-personal.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#164e3bbb' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#4b641a97' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#164e3bbb' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@184b6d64: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.screen.Infos,module.screen.Passwds,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@4de47c54
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/personal/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.3] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: governance
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'governance': startup date [Tue Oct 09 09:52:23 CST 2018]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-governance.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#33b8cfa0' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#12998b20' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#33b8cfa0' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@14925389: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,pullService,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService#0,pipeline,module.screen.Accesses,module.screen.Addresses,module.screen.Applications,module.screen.Consumers,module.screen.Loadbalances,module.screen.NoServicePrivilege,module.screen.Overrides,module.screen.Owners,module.screen.Providers,module.screen.Routes,module.screen.Services,module.screen.Weights,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@4de47c54
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.4] with 1 pre-pulled tools, 2 pre-queued tools and 0 runtime tools
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/governance/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService#0.5] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - Initializing Spring sub WebApplicationContext: home
+ INFO context.WebxComponentContext - Refreshing WebApplicationContext for namespace 'home': startup date [Tue Oct 09 09:52:24 CST 2018]; parent: Root WebApplicationContext
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/webx-home.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component-and-root.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/webx-component.xml, loaded by ResourceLoadingService]
+ INFO xml.XmlBeanDefinitionReader - Loading XML bean definitions from Resource[WEB-INF/common/pipeline.xml, loaded by ResourceLoadingService]
+ INFO context.WebxComponentContext - Bean '(inner bean)#789d1771' of type [class com.alibaba.citrus.springext.util.SpringExtUtil$ConstructorArg] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#2f5a5c89' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl$ComponentsConfigImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO config.WebxConfiguration - Application is running in Production Mode.
+ INFO context.WebxComponentContext - Bean 'webxConfiguration' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.WebxComponentContext - Bean '(inner bean)#789d1771' of type [class com.alibaba.citrus.webx.config.impl.WebxConfigurationImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ INFO context.InheritableListableBeanFactory - Pre-instantiating singletons in com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@181f1339: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,com.alibaba.citrus.service.configuration.support.PropertyPlaceholderConfigurer#0,templateService,mappingRuleService,dataResolverService,productionModeSensiblePostProcessor,webxConfiguration,pullService,pipeline,module.control.Menu,module.screen.Disable,module.screen.Index,module.screen.Lookup,module.screen.Reg,module.screen.Register,module.screen.Result,module.screen.Servicestatus,module.screen.Status,module.screen.Unreg,module.screen.Unregister,module.screen.Unregisterall,moduleLoaderService,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: com.alibaba.citrus.springext.support.context.InheritableListableBeanFactory@4de47c54
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization starting.
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : set path '/templates/home/'
+ INFO velocity.VelocityEngine - SpringResourceLoaderAdapter : initialization complete.
+ INFO rule.ExtensionMappingRule - Initialized extension.input:ExtensionMappingRule with cache disabled
+ INFO rule.ExtensionMappingRule - Initialized extension.output:ExtensionMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized action:DirectModuleMappingRule with cache disabled
+ INFO rule.DirectModuleMappingRule - Initialized screen.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized screen:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized screen.template:DirectTemplateMappingRule with cache disabled
+ INFO rule.FallbackTemplateMappingRule - Initialized layout.template:FallbackTemplateMappingRule with cache enabled
+ INFO rule.DirectModuleMappingRule - Initialized control.notemplate:DirectModuleMappingRule with cache disabled
+ INFO rule.FallbackModuleMappingRule - Initialized control:FallbackModuleMappingRule with cache enabled
+ INFO rule.DirectTemplateMappingRule - Initialized control.template:DirectTemplateMappingRule with cache disabled
+ INFO pull.PullService - Initialized pull service [key=PullService.pullService.6] with 16 pre-pulled tools, 9 pre-queued tools and 0 runtime tools
+ INFO context.WebxComponentsLoader - WebxComponents: initialization completed
+ INFO context.ContextLoader - Root WebApplicationContext: initialization completed in 22729 ms
+ INFO servlet.WebxFrameworkFilter - Initializing filter: webx
+ INFO servlet.WebxFrameworkFilter - WebxFrameworkFilter - webx: initialization completed
+ INFO servlet.SetLoggingContextFilter - Initializing filter: mdc
+ INFO servlet.SetLoggingContextFilter - SetLoggingContextFilter - mdc: initialization completed
+十月 09, 2018 9:52:26 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory D:\source\dubbo-admin-tomcat\webapps\dubbo-admin has finished in 28,577 ms
+十月 09, 2018 9:52:26 上午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-bio-8080"]
+十月 09, 2018 9:52:26 上午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["ajp-bio-8009"]
+十月 09, 2018 9:52:26 上午 org.apache.catalina.startup.Catalina start
+信息: Server startup in 28661 ms
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/services to uri governance/services.htm?{_type=services, _path=governance/services}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/services, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/services to uri governance/services.htm?{_type=services, _path=governance/services}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/services, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/services/qian.ling.yi.ext.dubbo.DemoService/providers to uri governance/providers.htm?{_type=providers, _path=governance/services/qian.ling.yi.ext.dubbo.DemoService/providers, services=qian.ling.yi.ext.dubbo.DemoService}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/services/qian.ling.yi.ext.dubbo.DemoService/providers, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/applications to uri governance/applications.htm?{_type=applications, _path=governance/applications}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/applications, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/applications/demotest-provider/services to uri governance/services.htm?{_type=services, _path=governance/applications/demotest-provider/services, applications=demotest-provider}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/applications/demotest-provider/services, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/applications/demotest-provider/addresses to uri governance/addresses.htm?{_type=addresses, _path=governance/applications/demotest-provider/addresses, applications=demotest-provider}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/applications/demotest-provider/addresses, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/applications/demotest-provider/overrides to uri governance/overrides.htm?{_type=overrides, _path=governance/applications/demotest-provider/overrides, applications=demotest-provider}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/applications/demotest-provider/overrides, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/applications/demotest-provider/addresses to uri governance/addresses.htm?{_type=addresses, _path=governance/applications/demotest-provider/addresses, applications=demotest-provider}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/applications/demotest-provider/addresses, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/applications/demotest-provider/services to uri governance/services.htm?{_type=services, _path=governance/applications/demotest-provider/services, applications=demotest-provider}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/applications/demotest-provider/services, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/applications to uri governance/applications.htm?{_type=applications, _path=governance/applications}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/applications, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/applications/demotest-provider/services to uri governance/services.htm?{_type=services, _path=governance/applications/demotest-provider/services, applications=demotest-provider}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/applications/demotest-provider/services, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/applications to uri governance/applications.htm?{_type=applications, _path=governance/applications}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/applications, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/applications/demotest-consumer/services to uri governance/services.htm?{_type=services, _path=governance/applications/demotest-consumer/services, applications=demotest-consumer}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/applications/demotest-consumer/services, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/applications/demotest-consumer/addresses to uri governance/addresses.htm?{_type=addresses, _path=governance/applications/demotest-consumer/addresses, applications=demotest-consumer}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/applications/demotest-consumer/addresses, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/applications/demotest-consumer/services to uri governance/services.htm?{_type=services, _path=governance/applications/demotest-consumer/services, applications=demotest-consumer}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/applications/demotest-consumer/services, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/services to uri governance/services.htm?{_type=services, _path=governance/services}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/services, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/services/qian.ling.yi.ext.dubbo.DemoService/providers to uri governance/providers.htm?{_type=providers, _path=governance/services/qian.ling.yi.ext.dubbo.DemoService/providers, services=qian.ling.yi.ext.dubbo.DemoService}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/services/qian.ling.yi.ext.dubbo.DemoService/providers, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/services to uri governance/services.htm?{_type=services, _path=governance/services}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/services, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/services/qian.ling.yi.ext.dubbo.DemoService/providers to uri governance/providers.htm?{_type=providers, _path=governance/services/qian.ling.yi.ext.dubbo.DemoService/providers, services=qian.ling.yi.ext.dubbo.DemoService}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/services/qian.ling.yi.ext.dubbo.DemoService/providers, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/services/qian.ling.yi.ext.dubbo.DemoService/consumers to uri governance/consumers.htm?{_type=consumers, _path=governance/services/qian.ling.yi.ext.dubbo.DemoService/consumers, services=qian.ling.yi.ext.dubbo.DemoService}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/services/qian.ling.yi.ext.dubbo.DemoService/consumers, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/services/qian.ling.yi.ext.dubbo.DemoService/providers to uri governance/providers.htm?{_type=providers, _path=governance/services/qian.ling.yi.ext.dubbo.DemoService/providers, services=qian.ling.yi.ext.dubbo.DemoService}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/services/qian.ling.yi.ext.dubbo.DemoService/providers, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/services/qian.ling.yi.ext.dubbo.DemoService/consumers to uri governance/consumers.htm?{_type=consumers, _path=governance/services/qian.ling.yi.ext.dubbo.DemoService/consumers, services=qian.ling.yi.ext.dubbo.DemoService}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/services/qian.ling.yi.ext.dubbo.DemoService/consumers, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/services/qian.ling.yi.ext.dubbo.DemoService/applications to uri governance/applications.htm?{_type=applications, _path=governance/services/qian.ling.yi.ext.dubbo.DemoService/applications, services=qian.ling.yi.ext.dubbo.DemoService}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/services/qian.ling.yi.ext.dubbo.DemoService/applications, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/services/qian.ling.yi.ext.dubbo.DemoService/routes to uri governance/routes.htm?{_type=routes, _path=governance/services/qian.ling.yi.ext.dubbo.DemoService/routes, services=qian.ling.yi.ext.dubbo.DemoService}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/services/qian.ling.yi.ext.dubbo.DemoService/routes, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/services/qian.ling.yi.ext.dubbo.DemoService/overrides to uri governance/overrides.htm?{_type=overrides, _path=governance/services/qian.ling.yi.ext.dubbo.DemoService/overrides, services=qian.ling.yi.ext.dubbo.DemoService}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/services/qian.ling.yi.ext.dubbo.DemoService/overrides, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/services/qian.ling.yi.ext.dubbo.DemoService/accesses to uri governance/accesses.htm?{_type=accesses, _path=governance/services/qian.ling.yi.ext.dubbo.DemoService/accesses, services=qian.ling.yi.ext.dubbo.DemoService}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/services/qian.ling.yi.ext.dubbo.DemoService/accesses, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/services/qian.ling.yi.ext.dubbo.DemoService/weights to uri governance/weights.htm?{_type=weights, _path=governance/services/qian.ling.yi.ext.dubbo.DemoService/weights, services=qian.ling.yi.ext.dubbo.DemoService}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/services/qian.ling.yi.ext.dubbo.DemoService/weights, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/services/qian.ling.yi.ext.dubbo.DemoService/loadbalances to uri governance/loadbalances.htm?{_type=loadbalances, _path=governance/services/qian.ling.yi.ext.dubbo.DemoService/loadbalances, services=qian.ling.yi.ext.dubbo.DemoService}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/services/qian.ling.yi.ext.dubbo.DemoService/loadbalances, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/services/qian.ling.yi.ext.dubbo.DemoService/owners to uri governance/owners.htm?{_type=owners, _path=governance/services/qian.ling.yi.ext.dubbo.DemoService/owners, services=qian.ling.yi.ext.dubbo.DemoService}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/services/qian.ling.yi.ext.dubbo.DemoService/owners, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.RestfuleUrlRewriter -  [DUBBO] REWRITE restful uri /governance/services/qian.ling.yi.ext.dubbo.DemoService/providers to uri governance/providers.htm?{_type=providers, _path=governance/services/qian.ling.yi.ext.dubbo.DemoService/providers, services=qian.ling.yi.ext.dubbo.DemoService}, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO interceptor.AuthorizationValve -  [DUBBO] AuthorizationValve of uri: /dubbo-admin/governance/services/qian.ling.yi.ext.dubbo.DemoService/providers, dubbo version: 2.0.1, current host: 192.168.1.128
+ INFO zkclient.ZkClient - zookeeper state changed (Disconnected)

@@ -1,5 +1,5 @@
 /build/
-/.idea/*
+/.idea
 .svn/
 /bin/
 *.iml
@@ -13,3 +13,5 @@
 .classpath
 *.orig
 /target/
+ext/dubbo-admin-tomcat/conf/Catalina/
+ext/dubbo-admin-tomcat/work/
