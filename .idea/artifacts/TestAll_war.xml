@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="TestAll:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="qian.ling.yi.war">
-      <element id="artifact" artifact-name="TestAll:war exploded" />
-    </root>
-  </artifact>
-</component>
