@@ -2,14 +2,13 @@ package qian.ling.yi.ext.spring.ioc;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import qian.ling.yi.ext.spring.ioc.bootstrap.AbstractContextLoader;
+import qian.ling.yi.ext.spring.bootstrap.AbstractContextLoaderTest;
 
 /**
  * 测试抽象需要注入对象，不用设置抽象类为@component，只要让子类为component即可。
  * Created by liuguobin on 2016/12/10.
  */
-public class TestIOC extends AbstractContextLoader{
+public class TestIOC extends AbstractContextLoaderTest {
 
     @Autowired
     ImplIoc implIoc;

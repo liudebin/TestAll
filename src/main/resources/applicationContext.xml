@@ -12,10 +12,24 @@
       http://www.springframework.org/schema/aop/spring-aop-4.0.xsd"
       >
     <!--qian.ling.yi.ext.tbSchedule,-->
-    <!--<context:component-scan base-package="qian.ling.yi.ext.tbSchedule,qian.ling.yi.ext.spring" />-->
-    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
-        <property name="providerClass" value="org.hibernate.validator.HibernateValidator"/>
-        <!--<property name="validationMessageSource" ref="messageSource"/>-->
+    <context:component-scan base-package="qian.ling.yi.ext.tbSchedule,qian.ling.yi.ext.spring" />
+    <!--<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">-->
+        <!--<property name="providerClass" value="org.hibernate.validator.HibernateValidator"/>-->
+        <!--&lt;!&ndash;<property name="validationMessageSource" ref="messageSource"/>&ndash;&gt;-->
+    <!--</bean>-->
+    <!--<aop:aspectj-autoproxy expose-proxy="true"/>-->
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+        <property name="ignoreUnresolvablePlaceholders" value="true" />
+        <property name="ignoreResourceNotFound" value="true" />
+        <property name="locations">
+            <list>
+                <value>/properties/b.properties</value>
+                <value>/properties/a.properties</value>
+            </list>
+        </property>
     </bean>
+
 
 </beans>

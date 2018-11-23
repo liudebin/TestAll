@@ -129,6 +129,18 @@
       <artifactId>spring-jdbc</artifactId>
       <version>4.3.3.RELEASE</version>
     </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aop</artifactId>
+      <version>4.3.3.RELEASE</version>
+    </dependency>
+      <dependency>
+          <groupId>org.aspectj</groupId>
+          <artifactId>aspectjweaver</artifactId>
+          <version>1.8.13</version>
+      </dependency>
+
+
 
    <!--<dependency>-->
       <!--<groupId>com.taobao.pamirs.schedule</groupId>-->
@@ -285,7 +297,7 @@
     <groupId>com.alibaba</groupId>
     <artifactId>dubbo</artifactId>
     <version>2.5.4</version>
-    <!--<exclusions>-->
+    <exclusions>
       <!--<exclusion>-->
         <!--<groupId>org.springframework</groupId>-->
         <!--<artifactId>*</artifactId>-->
@@ -298,35 +310,35 @@
         <!--<groupId>org.jboss.netty</groupId>-->
         <!--<artifactId>netty</artifactId>-->
       <!--</exclusion>-->
-      <!--<exclusion>-->
-        <!--<groupId>log4j</groupId>-->
-        <!--<artifactId>log4j</artifactId>-->
-      <!--</exclusion>-->
+      <exclusion>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+      </exclusion>
       <!--<exclusion>-->
         <!--<groupId>org.javassist</groupId>-->
         <!--<artifactId>javassist</artifactId>-->
       <!--</exclusion>-->
-    <!--</exclusions>-->
+    </exclusions>
   </dependency>
 
       <dependency>
           <groupId>org.apache.zookeeper</groupId>
           <artifactId>zookeeper</artifactId>
           <version>3.4.8</version>
-          <!--<exclusions>-->
-              <!--<exclusion>-->
-                  <!--<groupId>log4j</groupId>-->
-                  <!--<artifactId>log4j</artifactId>-->
-              <!--</exclusion>-->
-              <!--<exclusion>-->
-                  <!--<groupId>org.slf4j</groupId>-->
-                  <!--<artifactId>slf4j-log4j12</artifactId>-->
-              <!--</exclusion>-->
-              <!--<exclusion>-->
-                  <!--<groupId>org.slf4j</groupId>-->
-                  <!--<artifactId>slf4j-api</artifactId>-->
-              <!--</exclusion>-->
-          <!--</exclusions>-->
+          <exclusions>
+              <exclusion>
+                  <groupId>log4j</groupId>
+                  <artifactId>log4j</artifactId>
+              </exclusion>
+              <exclusion>
+                  <groupId>org.slf4j</groupId>
+                  <artifactId>slf4j-log4j12</artifactId>
+              </exclusion>
+              <exclusion>
+                  <groupId>org.slf4j</groupId>
+                  <artifactId>slf4j-api</artifactId>
+              </exclusion>
+          </exclusions>
       </dependency>
       <dependency>
       <groupId>com.github.sgroschupf</groupId>
@@ -343,6 +355,34 @@
           </exclusion>
       </exclusions>
   </dependency>
+
+      <!--esper 复杂事件处理-->
+    <dependency>
+        <groupId>com.espertech</groupId>
+        <artifactId>esper</artifactId>
+        <version>5.4.0</version>
+    </dependency>
+
+
+      <dependency>
+          <groupId>com.netflix.feign</groupId>
+          <artifactId>feign-core</artifactId>
+          <version>8.18.0</version>
+      </dependency>
+      <dependency>
+      <groupId>com.netflix.feign</groupId>
+        <artifactId>feign-gson</artifactId>
+        <version>8.18.0</version>
+      </dependency>
+
+
+
+    <dependency>
+      <groupId>org.jmockit</groupId>
+      <artifactId>jmockit</artifactId>
+      <version>1.30</version>
+      <!--<scope>test</scope>-->
+    </dependency>
 
   </dependencies>
   <build>

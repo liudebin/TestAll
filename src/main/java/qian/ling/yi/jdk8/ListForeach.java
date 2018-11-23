@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * 测试List的foreach
@@ -52,6 +53,17 @@ public class ListForeach extends AbstractTest {
     public void testSet() {
         list.forEach(tmp -> tmp.put("1", "set"));
         list.forEach(tmp -> logger.info(tmp.toString()));
+    }
+
+    @Test
+    public void testMap(){
+        int i =0;
+        List<String> collect = list.stream().map(f -> {
+            System.out.println();
+            return "";
+        }).collect(Collectors.toList());
+        logger.info("{}", JSON.toJSONString(collect));
+
     }
 
 

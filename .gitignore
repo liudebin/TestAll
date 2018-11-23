@@ -1,4 +1,4 @@
-/.idea
+/.idea/
 .svn/
 /bin/
 *.iml
@@ -11,3 +11,4 @@
 .classpath
 *.orig
 /target/
+
