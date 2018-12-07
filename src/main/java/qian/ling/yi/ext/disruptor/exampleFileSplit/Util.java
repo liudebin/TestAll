@@ -2,6 +2,9 @@ package qian.ling.yi.ext.disruptor.exampleFileSplit;
 
 import java.io.File;
 
+/**
+ * @author liuguobin
+ */
 public class Util {
 	
 	/**

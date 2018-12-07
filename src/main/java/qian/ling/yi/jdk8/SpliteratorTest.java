@@ -27,5 +27,7 @@ public class SpliteratorTest extends AbstractTest {
         final List<Object> list = Arrays.asList(objects);
 //        list.spliterator().
         logger.info("{}", JSON.toJSON(objects));
+
+
     }
 }
