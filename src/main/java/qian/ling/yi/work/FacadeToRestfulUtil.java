@@ -25,14 +25,15 @@ public class FacadeToRestfulUtil {
      * @author Chillax
      */
     public static void main(String args[]) throws Exception {
-        String path = "D:/ideaProjects/ces";
+//        String path = "D:/ideaProjects/ces";
+        String path = "D:/ideaProjects/com";
 
-        setFeignClient("ces-app", "ces");
-        getFacadeOrImplList(path, "Facade")
+        setFeignClient("com-app", "com");
+        getFileByType(path, "Facade")
                 .forEach(file -> readLine(file, FacadeToRestfulUtil::refactorFacadeLine)
                         .ifPresent(s -> writeLine(s, file)));
 
-        getFacadeOrImplList(path, "FacadeImpl")
+        getFileByType(path, "FacadeImpl")
                 .forEach(file -> readLine(file, FacadeToRestfulUtil::refactorFacadeImplLine)
                         .ifPresent(s -> writeLine(s, file)));
     }
