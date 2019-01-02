@@ -196,4 +196,11 @@ public class StringTest extends AbstractTest{
     class Base{
         public int i ;
     }
+
+    @Test
+    public void testReplace() {
+        String a = "@RequestParam(\"bbbb\")adfasdfafdadf";
+        System.out.println(a.replaceAll("@RequestParam\\(\"\\w*\"\\)", ""));
+    }
+
 }

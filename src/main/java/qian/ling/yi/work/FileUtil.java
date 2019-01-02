@@ -3,42 +3,44 @@ package qian.ling.yi.work;
 import java.io.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
-
+import java.util.stream.Stream;
 
 /**
- * FacadeToRestfulUtil
+ * TODO
  *
- * @date: 2018/12/4.
+ * @date: 2018/12/20.
  * @author: guobin.liu@holaverse.com
  */
 
-public class FacadeToRestfulUtil {
+public class FileUtil {
 
-    static public List<String> priType = Arrays.asList("int", "char", "double", "float"
-            , "String", "Integer", "Double", "Float");
-    private static String feignClient;
 
-    /**
-     * NIO读取百万级别文件
-     *
-     * @author Chillax
-     */
     public static void main(String args[]) throws Exception {
 //        String path = "D:/ideaProjects/ces";
-        String path = "D:/ideaProjects/com";
+//        String path = "D:/ideaProjects/com";
+//        String path = "D:/ideaProjects/rds";
+        String path = "D:/ideaProjects/mes";
 
-        setFeignClient("com-app", "com");
-        getFileByType(path, "Facade")
-                .forEach(file -> readLine(file, FacadeToRestfulUtil::refactorFacadeLine)
-                        .ifPresent(s -> writeLine(s, file)));
+//        setFeignClient("com-app", "com");
+//        getFileByType(path, "Facade.java")
+//                .forEach(file -> readLine(file, DubboToFeignUtil::refactorFacadeLine)
+//                        .ifPresent(s -> writeLine(s, file)));
+//
+//        getFileByType(path, "FacadeImpl.java")
+//                .forEach(file -> readLine(file, DubboToFeignUtil::refactorFacadeImplLine)
+//                        .ifPresent(s -> writeLine(s, file)));
+        getFileByType(path, "Facade.java")
+                .forEach(file -> refactorLine(file, FileUtil::response)
+                        .ifPresent(n->n.stream().filter(Objects::nonNull).forEach(System.out::println)));
 
-        getFileByType(path, "FacadeImpl")
-                .forEach(file -> readLine(file, FacadeToRestfulUtil::refactorFacadeImplLine)
-                        .ifPresent(s -> writeLine(s, file)));
+
     }
 
-    public static Optional<List<String>> readLine(File file, Function<String, String> function) {
+
+
+    public static Optional<List<String>> refactorLine(File file, Function<String, String> function) {
         try (FileReader fileReader = new FileReader(file);
              BufferedReader bufferedReader = new BufferedReader(fileReader)) {
             return Optional.of(bufferedReader.lines().map(function).collect(Collectors.toList()));
@@ -64,6 +66,31 @@ public class FacadeToRestfulUtil {
 
     }
 
+    public static void write(String content, File fOut) {
+        try (FileWriter fileWriter = new FileWriter(fOut);
+             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
+             bufferWriteLine(bufferedWriter, content);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void appendLine(List<String> lines, File file) {
+//        File fOut = new File(file.getAbsolutePath() + ".tmp");
+        try (FileWriter fileWriter = new FileWriter(file,true);
+             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
+            lines.forEach(
+                    str -> Optional.ofNullable(str)
+                            .ifPresent(s -> bufferWriteLine(bufferedWriter, str))
+            );
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+//        file.delete();
+//        fOut.renameTo(file);
+
+    }
+
     private static void bufferWriteLine(BufferedWriter bufferedWriter, String str) {
         try {
             bufferedWriter.write(str + "\n");
@@ -83,13 +110,12 @@ public class FacadeToRestfulUtil {
                 ).orElse(null);
     }
 
-    private static String refactorFacadeLine(String line) {
-        return facadeInterfaceAddFeignOption(line)
-                .orElseGet(() ->
-                        addPostMapping(line)
-                                .orElseGet(() -> getImport(line)));
-
+    private static String response(String line) {
+        return Optional.of(line)
+                .filter(l -> l.contains("Response") &&!l.contains("Response<") &&!l.contains("import"))
+                .orElse(null);
     }
+
 
     public static String getImport(String line) {
 
@@ -139,7 +165,7 @@ public class FacadeToRestfulUtil {
 
     public static List<File> getDir(String path) {
         return Arrays.stream(Objects.requireNonNull(new File(path).listFiles()))
-                .filter(f ->f.isDirectory() && !f.getName().contains("."))
+                .filter(f -> f.isDirectory() && !f.getName().contains("."))
                 .map(f -> {
                             List<File> list = getDir(f.getAbsolutePath());
                             list.add(f);
@@ -153,12 +179,12 @@ public class FacadeToRestfulUtil {
     }
 
     public static List<File> getFile(File dir, String keyWord) {
-        return  Optional.of(dir)
+        return Optional.of(dir)
                 .map(File::listFiles)
                 .map(Arrays::stream)
                 .map(stream -> stream
                         .filter(f ->
-                                f.getName().endsWith(keyWord + ".java")
+                                f.getName().endsWith(keyWord)
                                         && !f.getName().contains("Ext")
                         )
                         .collect(Collectors.toList())
@@ -166,10 +192,28 @@ public class FacadeToRestfulUtil {
                 .orElse(Collections.emptyList());
     }
 
+    public static List<File> getFileNew(File dir, Predicate<File> predicate) {
+        return Optional.of(dir)
+                .map(File::listFiles)
+                .map(Arrays::stream)
+                .map(stream -> stream
+                        .filter(predicate)
+                        .collect(Collectors.toList())
+                )
+                .orElse(Collections.emptyList());
+    }
+
     public static List<File> getFileByType(String path, String keyWord) {
-        return getDir(path)
-                .stream()
+        return Stream.of(getDir(path), Collections.singletonList(new File(path)))
+                .flatMap(Collection::stream)
                 .flatMap(n -> getFile(n, keyWord).stream())
+                .collect(Collectors.toList());
+    }
+
+    public static List<File> getFileByTypeNew(String path, Predicate<File> predicate) {
+        return Stream.of(getDir(path), Collections.singletonList(new File(path)))
+                .flatMap(Collection::stream)
+                .flatMap(n -> getFileNew(n, predicate).stream())
                 .collect(Collectors.toList());
     }
 
@@ -191,98 +235,17 @@ public class FacadeToRestfulUtil {
     }
 
 
-    static Optional<String> addPostMapping(String line) {
-        return Optional.of(line).filter(l -> l.contains("("))
-                .map(str -> str.substring(0, str.indexOf("("))
-                        .trim()
-                        .split(" "))
-                .filter(n -> n.length > 1)
-                .flatMap(n -> Arrays.stream(n).skip(n.length - 1)
-                        .map(m -> "\t@PostMapping(\"/" + m + "\")\n")
-                        .findFirst())
-                .map(l -> l.concat(addRequestTypeStr(line)));
-
-    }
-
     static Optional<String> implAddPostMapping(String line) {
         return Optional.of(line)
                 .filter(l -> l.contains("(") && l.contains("public"))
-                .map(FacadeToRestfulUtil::addImplRequestType);
+                .map(DubboToFeignUtil::addImplRequestType);
     }
 
-    static String addRequestTypeStr(String str) {
-//        (String bizTpye, String bizNo)
-
-        Map<String, String> map = Arrays.stream(
-                str.substring(str.indexOf("(") + 1, str.indexOf(")"))
-                        .trim()
-                        .split(","))
-                .filter(n -> n.trim().split(" ").length == 2)
-                .collect(Collectors.toMap(n -> n, FacadeToRestfulUtil::refactorFacadeParam));
-
-
-        for (Map.Entry<String, String> stringStringEntry : map.entrySet()) {
-            str = str.replaceAll(stringStringEntry.getKey(), stringStringEntry.getValue());
-        }
-
-        return str;
-    }
-
-    private static String refactorFacadeParam(String n) {
-        String[] s = n.trim().split(" ");
-        String str1 ;
-        if (startWithPrimate(s[0])) {
-            str1 = "@RequestParam(\"".concat(s[1]).concat("\")").concat(n);
-        } else {
-            str1 = "@RequestBody ".concat(n);
-        }
-        return str1;
-    }
-
-    public static String addImplRequestType(String str) {
-//        (String bizTpye, String bizNo)
-
-        Map<String, String> map = Arrays.stream(
-                str.substring(str.indexOf("(") + 1, str.indexOf(")"))
-                        .trim()
-                        .split(","))
-                .filter(n -> n.trim().split(" ").length == 2)
-                .map(String::trim)
-                .filter(n -> !startWithPrimate(n))
-                .collect(Collectors.toMap(n -> n, "@RequestBody "::concat));
-
-        for (Map.Entry<String, String> stringStringEntry : map.entrySet()) {
-            str = str.replaceAll(stringStringEntry.getKey(), stringStringEntry.getValue());
-        }
-
-        return str;
-    }
-
-
-    static boolean startWithPrimate(String str) {
-        return priType.stream().anyMatch(str::startsWith);
-    }
-
-
-    static String facadeInterfaceAddFeign(String line) {
-        return getFeignClient()
-                .concat("@RequestMapping(\"/")
-                .concat(line.substring(line.indexOf(" interface") + 10, line.indexOf("{")).trim() + "\")")
-                .concat("\n").concat(line);
-    }
-
-    private static String getFeignClient() {
-        return feignClient;
-    }
-
-    private static void setFeignClient(String app, String domain) {
-        feignClient = "@FeignClient(name = \"" + app + "\", url = \"http://" + domain + "${dnsDomain:}\")\n";
-    }
 
 
     static Optional<String> facadeInterfaceAddFeignOption(String line) {
         return Optional.of(line).filter(l -> l.contains("public interface"))
-                .map(FacadeToRestfulUtil::facadeInterfaceAddFeign);
+                .map(DubboToFeignUtil::facadeInterfaceAddFeign);
     }
 
 
@@ -291,7 +254,5 @@ public class FacadeToRestfulUtil {
                 .filter(l -> l.contains("public class"))
                 .map(l -> "@RestController".concat("\n ").concat(l));
     }
-
-
 
 }

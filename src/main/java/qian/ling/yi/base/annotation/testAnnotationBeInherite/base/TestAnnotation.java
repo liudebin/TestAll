@@ -1,4 +1,4 @@
-package qian.ling.yi.base.annotation.testAnnotationBeInherite;
+package qian.ling.yi.base.annotation.testAnnotationBeInherite.base;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
