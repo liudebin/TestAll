@@ -1,5 +1,6 @@
 package qian.ling.yi.collection;
 
+import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -73,5 +74,12 @@ public class LinkedHashMapTest {
 
 
 
+    }
+
+    @Test
+    public void testJsonObject(){
+        LinkedHashMap<String, String> s = new LinkedHashMap<>();
+        s.put("a", "b");
+//        System.out.println((JSONObject)s);
     }
 }

@@ -91,21 +91,28 @@ public class FacadeMockMethodUtil {
     public static List<String> getImplImpl(List<String> methodClones ){
         return methodClones.stream()
                 .filter(n ->!n.contains("@PostMapping"))
-                .map(n-> "\t@Override\n"+ n.replaceAll("@RequestParam\\(\"\\w*\"\\)", "") + "{\n"
-                        + "\t\t" + "Map<String, Object> map = new HashMap<>();\n" +
-                        "    \tmap.put(\"\", );\n" +
-                        "\t\treturn new Response<>().success(map);\n" + "\t}\n"+"\n"
-                ).collect(Collectors.toList());
+                .map(n-> {
+                        String newLine ="\n\t@Deprecated\n\t@Override\n";
+                            if (!n.contains("public")) {
+                                newLine += "\tpublic";
+                            }
+                            return newLine + n.substring(0, n.length()-1).replaceAll("@RequestParam\\(\"\\w*\"\\)", "") + "{\n"
+                                    + "\t\t" + "Map<String, Object> map = new HashMap<>();\n" +
+                                    "    \tmap.put(\"\", );\n" +
+                                    "\t\treturn new Response<>().success(map);\n" + "\t}\n"+"\n";
+                }).collect(Collectors.toList());
 
     }
 
     public static void createTestFile(File file, List<String> methodClones, String testPath){
         String fileName = getFileName(file.getName(), 0, ".");
         String var = fileName.substring(0, 1).toLowerCase() + fileName.substring(1);
-        String  s = "package com.example.demo;\n" +
+        String  s = "package com.example.demo.rds;\n" +
                 "\n" +
+                "import com.example.demo.FeignTestUtil;\n" +
                 "import com.qihoo.finance.msf.api.domain.Response;\n" +
-                "import org.hamcrest.CoreMatchers;\n" +
+                "import com.qihoo.finance.rds.modules.blacklist.domain.BlacklistDomain;\n" +
+                "import com.qihoo.finance.rds.modules.blacklist.facade.BlackListFacade;\n" +
                 "import org.junit.Assert;\n" +
                 "import org.junit.Test;\n" +
                 "import org.junit.runner.RunWith;\n" +
@@ -114,7 +121,6 @@ public class FacadeMockMethodUtil {
                 "import org.springframework.test.context.junit4.SpringRunner;\n" +
                 "\n" +
                 "import java.util.ArrayList;\n" +
-                "import java.util.HashMap;\n" +
                 "import java.util.List;\n" +
                 "import java.util.Map;\n" +
                 "\n" +
@@ -132,9 +138,9 @@ public class FacadeMockMethodUtil {
                 .filter(n ->!n.contains("@PostMapping"))
                 .map(n -> buildTestMethod(file, n)).collect(Collectors.joining());
         s = s + collect + "\n}";
-        System.out.println(s);
+//        System.out.println(s);
         File fOut = new File(testPath+ getTestFileName(file.getName())+ ".java");
-        System.out.println(fOut.getPath());
+//        System.out.println(fOut.getPath());
         FileUtil.write(s, fOut);
     }
 
@@ -146,7 +152,7 @@ public class FacadeMockMethodUtil {
                 + " \n\t\t\t= FeignTestUtil.buildBean(.class);\n"
                 + "\t\tResponse<Map> mapResponse = " + fileName.substring(0, 1).toLowerCase() + fileName.substring(1)
                 +"."+ getMethodName(n).get() + "("+getParam(n)+ ");\n"
-                + "        Assert.assertEquals(FeignTestUtil.propertiesNotEqual(, mapResponse.getData().get(\"\")), CoreMatchers.is(false));\n" +
+                + "        Assert.assertFalse(FeignTestUtil.propertiesNotEqual(, mapResponse.getData().get(\"\")));\n" +
                 "\t}";
     }
 
@@ -177,7 +183,7 @@ public class FacadeMockMethodUtil {
     }
 
     static Optional<String> methodAnnotationClone(String line) {
-        return Optional.of(line).filter(n -> n.contains("@PostMapping")).map(str -> "\n\t" + str.substring(0, str.lastIndexOf("\")")).trim().concat("Clone\")"));
+        return Optional.of(line).filter(n -> n.contains("@PostMapping")).map(str -> "\n\t@Deprecated\n\t" + str.substring(0, str.lastIndexOf("\")")).trim().concat("Clone\")"));
     }
 
     static Optional<String> methodDeclareClone(String line) {
@@ -189,14 +195,14 @@ public class FacadeMockMethodUtil {
         if (line.contains("public")){
             newLine += "public";
         }
-        return newLine + " Response<Map> " + methodName + "Clone" + line.substring(line.indexOf(methodName) + methodName.length(), line.length());
+        return newLine + " Response<Map> " + methodName + "Clone" + line.substring(line.indexOf(methodName) + methodName.length());
 
     }
 
     private static Optional<String> getMethodName(String line) {
         return Optional.of(line)
                 .filter(str -> str.contains("("))
-                .filter(l -> l.contains("Response") || l.contains("@RequestBody") || l.contains("@RequestParam"))
+                .filter(l -> l.contains("Response") || l.contains("@RequestBody") || l.contains("@RequestParam")|| l.contains("()"))
                 .map(str -> str.substring(0, str.indexOf("("))
                 .trim()
                 .split(" "))

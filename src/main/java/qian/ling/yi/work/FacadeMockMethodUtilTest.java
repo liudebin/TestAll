@@ -70,9 +70,10 @@ public class FacadeMockMethodUtilTest {
 
     @Test
     public void testRds() {
-        String testPath = "D:\\ideaProjects\\demo\\src\\test\\java\\com\\example\\demo\\";
+        String testPath = "D:\\ideaProjects\\demo\\src\\test\\java\\com\\example\\demo\\rds\\";
         String path = "D:/ideaProjects/rds";
         FacadeMockMethodUtil.mockMethod(path, testPath);
+        //todo
     }
 
 
