@@ -38,20 +38,31 @@ public class HashMapTest {
         t1.put("3", "1");
         t1.put("4", "1");
 
-        //到12 resize
-        HashMap<String, String> t2 = new HashMap<>(16);
-        t1.put("1", "1");
-        t1.put("2", "1");
-        t1.put("3", "1");
-        t1.put("4", "1");
-        t1.put("5", "1");
-        t1.put("6", "1");
-        t1.put("7", "1");
-        t1.put("8", "1");
-        t1.put("9", "1");
-        t1.put("10", "1");
-        t1.put("11", "1");
-        t1.put("12", "1");
+        //到7 resize
+        HashMap<String, String> t2 = new HashMap<>(8);
+        t2.put("1", "1");
+        t2.put("2", "1");
+        t2.put("3", "1");
+        t2.put("4", "1");
+        t2.put("5", "1");
+        t2.put("6", "1");
+        t2.put("7", "1");
+
+        //到13 resize
+        HashMap<String, String> t3 = new HashMap<>(16);
+        t3.put("1", "1");
+        t3.put("2", "1");
+        t3.put("3", "1");
+        t3.put("4", "1");
+        t3.put("5", "1");
+        t3.put("6", "1");
+        t3.put("7", "1");
+        t3.put("8", "1");
+        t3.put("9", "1");
+        t3.put("10", "1");
+        t3.put("11", "1");
+        t3.put("12", "1");
+        t3.put("13", "1");
 
     }
 
