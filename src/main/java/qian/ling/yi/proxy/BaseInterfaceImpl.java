@@ -8,4 +8,9 @@ public class BaseInterfaceImpl implements BaseInterface {
     public void printA() {
         System.out.println("A");
     }
+
+    public void printB() {
+        System.out.println("B");
+    }
+
 }
