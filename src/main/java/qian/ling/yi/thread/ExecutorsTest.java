@@ -18,7 +18,7 @@ public class ExecutorsTest {
     public static void main(String[] args) {
         final AtomicLong threadIndex = new AtomicLong(0L);
         ExecutorService executorService = Executors.newFixedThreadPool(2, r -> new Thread(r, "hahhah" + threadIndex.incrementAndGet()));
-
+        executorService.isShutdown();
         for (int i = 0; i < 10; i ++) {
 
             executorService.execute(() ->{

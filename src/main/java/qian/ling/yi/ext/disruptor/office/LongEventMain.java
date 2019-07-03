@@ -36,10 +36,7 @@ public class LongEventMain {
         disruptor.handleEventsWith(new LongEventHandler());
 
         // Start the Disruptor, starts all threads running
-        disruptor.start();
-
-        // Get the ring buffer from the Disruptor to be used for publishing.
-        RingBuffer<LongEvent> ringBuffer = disruptor.getRingBuffer();
+        RingBuffer<LongEvent> ringBuffer =disruptor.start();
 
 //        LongEventProducer producer = new LongEventProducer(ringBuffer);
         LongEventProducerWithTranslator translator = new LongEventProducerWithTranslator(ringBuffer);

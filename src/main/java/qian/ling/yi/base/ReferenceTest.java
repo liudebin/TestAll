@@ -1,7 +1,11 @@
 package qian.ling.yi.base;
 
+import com.alibaba.fastjson.JSON;
 import org.junit.Test;
 import qian.ling.yi.base.JVMCustom.ClassFile;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * ReferenceTest
@@ -34,6 +38,17 @@ public class ReferenceTest {
         ClassFile classFile =  new ClassFile();
         System.out.println(a);
         System.out.println(b);
+    }
+
+    @Test
+    public void testHahsMap() {
+        Map a = new HashMap<String, Integer>();
+        a.put("a", "1");
+        Map b = a;
+        b.put("b", 2);
+        a.put("c", 3);
+        System.out.println(JSON.toJSONString(a));
+        System.out.println(JSON.toJSONString(b));
     }
 
 }

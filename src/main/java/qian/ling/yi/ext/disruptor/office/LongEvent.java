@@ -18,6 +18,9 @@ public class LongEvent {
         return value;
     }
 
+    LongEvent() {
+        System.out.println("init");
+    }
     @Override
     public String toString() {
         return "LongEvent{" +

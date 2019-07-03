@@ -30,6 +30,7 @@ public class DroolsTest extends AbstractTest {
         KieSession kieSession = kieContainer.newKieSession("helloWorldSession");
         Student student = new Student();
         student.setAge(22);
+        student.setName("name");
         kieSession.insert(student);
         kieSession.fireAllRules();
         kieSession.dispose();

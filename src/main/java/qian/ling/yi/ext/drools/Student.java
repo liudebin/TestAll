@@ -8,7 +8,7 @@ package qian.ling.yi.ext.drools;
 public class Student {
     //年龄
     private Integer age;
-
+    private String name;
     public Integer getAge() {
         return age;
     }
@@ -16,4 +16,11 @@ public class Student {
         this.age = age;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

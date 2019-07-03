@@ -203,7 +203,8 @@
       <dependency>
           <groupId>com.lmax</groupId>
           <artifactId>disruptor</artifactId>
-          <version>3.3.6</version>
+          <!--<version>3.3.6</version>-->
+          <version>3.4.2</version>
       </dependency>
 
     <dependency>
@@ -383,6 +384,9 @@
       <version>1.30</version>
       <!--<scope>test</scope>-->
     </dependency>
+
+
+
 
   </dependencies>
   <build>
