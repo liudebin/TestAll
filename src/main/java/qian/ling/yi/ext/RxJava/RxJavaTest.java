@@ -2,6 +2,7 @@ package qian.ling.yi.ext.RxJava;
 
 import com.alibaba.fastjson.JSON;
 import org.junit.Test;
+import qian.ling.yi.AbstractTest;
 import rx.*;
 import rx.functions.Action1;
 import rx.functions.Func0;
@@ -18,7 +19,7 @@ import java.util.concurrent.Future;
  * @date 2018/3/14
  */
 
-public class RxJavaTest {
+public class RxJavaTest extends AbstractTest {
     @Test
     public void testHello() {
         final Subscription subscribe = Observable.
@@ -26,17 +27,17 @@ public class RxJavaTest {
                 .subscribe(s -> {
             try {
                 Thread.sleep(5000);
-                System.out.println("睡醒");
+                logger.info("睡醒");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
-            System.out.println("Hello " + s + "!");
+            logger.info("Hello " + s + "!");
         });
 
-        System.out.println(subscribe.isUnsubscribed());
+        logger.info("{}", subscribe.isUnsubscribed());
         subscribe.unsubscribe();
-        System.out.println("你妹");
+        logger.info("你妹");
     }
 
     @Test
@@ -47,23 +48,23 @@ public class RxJavaTest {
                         new Subscriber<String>() {
                             @Override
                             public void onCompleted() {
-                                System.out.println("custom onCompleted");
+                                logger.info("custom onCompleted");
                             }
 
                             @Override
                             public void onError(Throwable e) {
-                                System.out.println("custom error");
+                                logger.info("custom error");
                             }
                             @Override
                             public void onNext(String s) {
-                                System.out.println("Hello + " + s + "!");
+                                logger.info("Hello + " + s + "!");
                             }
 
                             @Override
                             public void onStart() {
                                 try {
                                     Thread.sleep(5000);
-                                    System.out.println("睡醒");
+                                    logger.info("睡醒");
                                 } catch (InterruptedException e) {
                                     e.printStackTrace();
                                 }
@@ -71,59 +72,11 @@ public class RxJavaTest {
                         });
 
 
-        System.out.println(subscribe.isUnsubscribed());
+        logger.info("{}", subscribe.isUnsubscribed());
         subscribe.unsubscribe();
-        System.out.println("你妹");
+        logger.info("你妹");
     }
 
-
-    @Test
-    public void testDefer() throws ExecutionException, InterruptedException {
-//        此处真正的 subscriber被包装成 SafeSubscriber 再包装成 subscriber
-//        subscriber 是会被传递到最终的  onObservable 身上。 Observable会变，如defer 到 defer 调用工厂类生成 Observable，
-//        因此其对应的 onObservable 也会变。
-        final Observable<Integer> defer = Observable.defer(new Func0<Observable<Integer>>() {
-            int i = 1;
-
-            @Override
-            public Observable<Integer> call() {
-                int a = i++;
-                int b = i++;
-                try {
-                    System.out.println("开始休眠");
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                return Observable.from(Arrays.asList(a, b));
-            }
-        });
-//        defer.subscribe(s->{
-//            try {
-//                Thread.sleep(10);
-//                System.out.println("睡醒");
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//            System.out.println("Hello " + s + "!");
-//        });
-        final Future<List<Integer>> listFuture = defer.toList().toBlocking().toFuture();
-        System.out.println(listFuture.get());
-
-
-        defer.subscribe(s->{
-            try {
-                Thread.sleep(5000);
-                System.out.println("睡醒");
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println("Hello " + s + "!");
-        });
-
-
-        System.out.println("你妹");
-    }
 
 
     @Test
@@ -140,7 +93,7 @@ public class RxJavaTest {
 //
 //        final Future<Integer> integerFuture = defer.toBlocking().toFuture();
 //        try {
-//            System.out.println(integerFuture.get());
+//            logger.info(integerFuture.get());
 //        } catch (InterruptedException | ExecutionException e) {
 //            e.printStackTrace();
 //        }
@@ -170,10 +123,10 @@ public class RxJavaTest {
                 .toFuture();
 
         try {
-            System.out.println("到了");
-            System.out.println(JSON.toJSON(listFuture.get()));
-            System.out.println(JSON.toJSON(listFuture.get().getClass()));
-            System.out.println(JSON.toJSON(listFuture.get()));
+            logger.info("到了");
+            logger.info("{}", JSON.toJSON(listFuture.get()));
+            logger.info("{}", JSON.toJSON(listFuture.get().getClass()));
+            logger.info("{}", JSON.toJSON(listFuture.get()));
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
@@ -193,120 +146,29 @@ public class RxJavaTest {
 //        定义，但不调用
         final Action1<String > onNext = s -> {
             try {
-                System.out.println("睡会儿 10 s");
+                logger.info("睡会儿 10 s");
                 Thread.sleep(10000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("睡好了");
-            System.out.println("Hello " + s + "!");
+            logger.info("睡好了");
+            logger.info("Hello " + s + "!");
         };
 //        定义，但不调用
         final Observable<String> observable = Observable.from(Arrays.asList("a", "b"));
 
 //      在Observable订阅订阅者，调用 Observable
         observable.subscribe(onNext); // 此处就阻塞了？
-        System.out.println("玩你自己的 5 s");
+        logger.info("玩你自己的 5 s");
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("玩玩了");
-    }
-
-    /**
-     * 定义一个 Observable Factory ，之后每次被订阅就会创建一个先的 Observable
-     */
-    @Test
-    public void TestDefer() {
-
-        final Observable<Object> defer = Observable.defer(() ->
-                {
-                    System.out.println("new one");
-                return Observable.from(Arrays.asList("a","b"));}
-        );
-        defer.subscribe((s) -> {
-            System.out.println("玩你自己的 5 s");
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println("玩玩了");
-            System.out.println(s);
-
-        });
-
-        defer.subscribe(System.out::println);
-    }
-
-    @Test
-    public void testJust() throws ExecutionException, InterruptedException {
-        Observable
-                .just("a").subscribe(System.out::println);
-    }
-
-    @Test
-    public void testJustFuture() throws ExecutionException, InterruptedException {
-        final Future<String> a = Observable
-                .just("a")
-                .toBlocking()
-                .toFuture();
-        System.out.println(a.get());
+        logger.info("玩玩了");
     }
 
 
-    @Test
-    public void testFuture() throws ExecutionException, InterruptedException {
-
-    }
-
-    @Test
-    public void testObserver() {
-        Observer<String> observer = new Observer<String>() {
-            @Override
-            public void onNext(String s) {
-                System.out.println("Item: " + s);
-            }
-
-            @Override
-            public void onCompleted() {
-                System.out.println("Completed!");
-            }
-
-            @Override
-            public void onError(Throwable e) {
-                System.out.println("Error!");
-            }
-        };
-
-
-        Subscriber<String> subscriber = new Subscriber<String>() {
-            @Override
-            public void onCompleted() {
-                System.out.println("subscriber commpleted");
-            }
-
-            @Override
-            public void onError(Throwable e) {
-                System.out.println("subscriber on Error");
-            }
-
-            @Override
-            public void onNext(String s) {
-                System.out.println("subscriber: " + s);
-            }
-
-            @Override
-            public void onStart() {
-                System.out.println("start");
-            }
-        };
-
-        Observable.just("a","b").subscribe(subscriber);
-        Observable.just("a","b").subscribe(observer);
-    }
 
 //    @Test
 //    public void testRxJava2() {
