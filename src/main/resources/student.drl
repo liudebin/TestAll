@@ -3,14 +3,14 @@ package com.droos.test;
 
 //需要进行规则匹配的对象（ fact ）
 import qian.ling.yi.ext.drools.Student;
+import qian.ling.yi.ext.drools.Facebook;
 
 //规则名称
 rule "A"
 
             //条件Conditions即LHS（left hand side）
             when
-                    Student(age<=20);
-
+                    Student(age<=20 ,name ==null && name.trim() not in ("1"));
             //结果Actions即RHS（right hand side或者consequence）
             then
                     System.out.println("我是儿童");
@@ -18,6 +18,9 @@ end
 
 rule "B"
             when
+//                    验证是student对象
+//                    $student: Student();
+//                     Student();
                     Student(age>20,age<=30,name=="name");
             then
                     System.out.println("我是青年人");

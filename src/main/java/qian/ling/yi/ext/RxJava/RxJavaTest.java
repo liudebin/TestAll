@@ -21,7 +21,9 @@ import java.util.concurrent.Future;
 public class RxJavaTest {
     @Test
     public void testHello() {
-        final Subscription subscribe = Observable.from(Arrays.asList("a", "b")).subscribe(s -> {
+        final Subscription subscribe = Observable.
+                from(Arrays.asList("a", "b"))
+                .subscribe(s -> {
             try {
                 Thread.sleep(5000);
                 System.out.println("睡醒");
@@ -39,7 +41,8 @@ public class RxJavaTest {
 
     @Test
     public void testSubscriber() {
-        final Subscription subscribe = Observable.from(Arrays.asList("a", "b"))
+        final Subscription subscribe = Observable
+                .from(Arrays.asList("a", "b"))
                 .subscribe(
                         new Subscriber<String>() {
                             @Override
