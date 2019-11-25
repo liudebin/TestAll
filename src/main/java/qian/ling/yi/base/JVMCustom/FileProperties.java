@@ -2,7 +2,7 @@ package qian.ling.yi.base.JVMCustom;
 
 import qian.ling.yi.util.ArrayUtil;
 import qian.ling.yi.util.ByteUtil;
-import qian.ling.yi.util.FileUtil;
+import qian.ling.yi.file.FileUtil;
 
 import java.io.IOException;
 import java.io.InputStream;

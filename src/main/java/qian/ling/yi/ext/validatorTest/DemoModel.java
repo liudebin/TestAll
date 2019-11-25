@@ -1,10 +1,9 @@
 package qian.ling.yi.ext.validatorTest;
 
-import jdk.nashorn.internal.objects.annotations.Getter;
-import jdk.nashorn.internal.objects.annotations.Setter;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.validation.constraints.AssertFalse;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 
 /**
@@ -12,7 +11,7 @@ import javax.validation.constraints.Pattern;
  */
 
 public class DemoModel {
-    @NotBlank(message="用户名不能为空")
+    @NotEmpty(message="用户名不能为空")
     private String userName;
 
     @NotBlank(message="年龄不能为空")

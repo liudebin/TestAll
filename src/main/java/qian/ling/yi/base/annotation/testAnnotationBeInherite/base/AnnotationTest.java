@@ -10,7 +10,7 @@ import qian.ling.yi.AbstractTest;
  * @author: guobin.liu@holaverse.com
  */
 
-@TestAnnotation1
+@TestAnnotation1("qian.ling.yi.base")
 public class AnnotationTest extends AbstractTest {
     @Test
     public void test(){

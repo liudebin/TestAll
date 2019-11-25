@@ -11,7 +11,10 @@ import java.lang.annotation.RetentionPolicy;
  */
 
 @Retention(RetentionPolicy.RUNTIME)
-@TestAnnotation
+//@TestAnnotation
 public @interface TestAnnotation1{
     String z() default "z";
+    String[] value() default {};
+    String[] basePackages() default {};
+    Class<?>[] basePackageClasses() default {};
 }

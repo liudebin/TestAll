@@ -40,6 +40,7 @@ public class FileLineOperate extends AbstractTest {
             InputStream ins = null;
             OutputStream outs = null;
             try {
+
                 // FileInputStream:从文件系统中的某个文件中获得输入字节。
                 ins = new FileInputStream(file);
                 outs = new FileOutputStream("/Users/liuguobin/IdeaProjects/pay/src/main/resources/interface/kq/file/test");
@@ -250,6 +251,8 @@ public class FileLineOperate extends AbstractTest {
             }
         }
     }
+
+
 
 
 

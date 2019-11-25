@@ -13,4 +13,6 @@ import java.lang.annotation.RetentionPolicy;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface TestAnnotation {
     String a() default "a";
+    String name() default "a";
+    String url() default "a";
 }

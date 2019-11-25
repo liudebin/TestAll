@@ -3,6 +3,8 @@ package qian.ling.yi.base.annotation.testAnnotationBeInherite;
 import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.junit.Test;
+import org.springframework.core.type.StandardAnnotationMetadata;
+import org.springframework.mock.env.MockEnvironment;
 import qian.ling.yi.AbstractTest;
 import qian.ling.yi.base.annotation.testAnnotationBeInherite.base.TestAnnotation;
 import qian.ling.yi.base.annotation.testAnnotationBeInherite.base.TestAnnotation1;
@@ -31,5 +33,15 @@ public class AnnotationTest extends AbstractTest {
 
     public static void main(String[] args) {
         System.out.println(AnnotationTest.class.getAnnotatedSuperclass());
+    }
+
+    @Test
+    public void ReferFeignClientsRegister(){
+        ReferFeignClientsRegistrar referFeignClientsRegister = new ReferFeignClientsRegistrar();
+        referFeignClientsRegister.setEnvironment(new MockEnvironment());
+        StandardAnnotationMetadata standardAnnotationMetadata = new StandardAnnotationMetadata(AnnotationTest.class);
+
+        referFeignClientsRegister.scanAnnotation(standardAnnotationMetadata);
+
     }
 }
