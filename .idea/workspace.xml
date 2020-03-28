@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9111144b-168e-4e64-b871-1dd24ce3e3c4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/ConsistentHashingWithVirtualNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/ConsistentHashingWithoutVirtualNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/CustomBinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/FunnelBucketRateLimiter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/IntegerReverseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/LinkReverseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/MaxLength.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/SimpleMoneyFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/Str2Float.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/TokenBucketRateLimiter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/TreeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/TwoNum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/face/MaxCount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/base/SwitchTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/base/extend/ExtendTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/base/extend/Parent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/base/extend/Son.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/collection/ListNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/leetcode/UniqueSolution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/thread/pool/ExcutorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/thread/pool/SingletonTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/tools/LeakyBucket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/qian/ling/yi/base/InnerClassInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/base/InnerClassInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/qian/ling/yi/base/InnerClassPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/base/InnerClassPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/qian/ling/yi/jdk8/IsStreamTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/jdk8/IsStreamTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/qian/ling/yi/netty/api/EchoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/netty/api/EchoClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/qian/ling/yi/netty/api/EchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/netty/api/EchoServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/qian/ling/yi/thread/CountDownLatchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/thread/CountDownLatchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/qian/ling/yi/thread/sourceRead/StampedLockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qian/ling/yi/thread/sourceRead/StampedLockTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="ProjectId" id="1YPsp5HRcbzBzH1QmVIhB0NO2Pm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="qian.ling.yi.arithmetic" />
+      <recent name="qian.ling.yi.base" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TwoNum.test">
+    <configuration name="IntegerReverseTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qian.ling.yi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="qian.ling.yi.arithmetic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="qian.ling.yi.arithmetic" />
+      <option name="MAIN_CLASS_NAME" value="qian.ling.yi.arithmetic.IntegerReverseTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedListTest.testReverse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qian.ling.yi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="qian.ling.yi.collection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="qian.ling.yi.collection" />
+      <option name="MAIN_CLASS_NAME" value="qian.ling.yi.collection.LinkedListTest" />
+      <option name="METHOD_NAME" value="testReverse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Str2Float" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qian.ling.yi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="qian.ling.yi.arithmetic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="qian.ling.yi.arithmetic" />
+      <option name="MAIN_CLASS_NAME" value="qian.ling.yi.arithmetic.Str2Float" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Str2Float.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qian.ling.yi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="qian.ling.yi.arithmetic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="qian.ling.yi.arithmetic" />
+      <option name="MAIN_CLASS_NAME" value="qian.ling.yi.arithmetic.Str2Float" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TwoNum.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qian.ling.yi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="qian.ling.yi.arithmetic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="qian.ling.yi.arithmetic" />
+      <option name="MAIN_CLASS_NAME" value="qian.ling.yi.arithmetic.TwoNum" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TwoNum.test" />
+        <item itemvalue="JUnit.Str2Float" />
+        <item itemvalue="JUnit.Str2Float.test" />
+        <item itemvalue="JUnit.IntegerReverseTest.test" />
+        <item itemvalue="JUnit.LinkedListTest.testReverse" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9111144b-168e-4e64-b871-1dd24ce3e3c4" name="Default Changelist" comment="" />
+      <created>1582855743344</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582855743344</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="526" y="145" key="#com.intellij.ide.util.MemberChooser" timestamp="1584620035974">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="526" y="145" key="#com.intellij.ide.util.MemberChooser/0.0.1440.920@0.0.1440.920" timestamp="1584620035974" />
+    <state x="504" y="345" width="431" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1583658885375">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="504" y="345" width="431" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1440.920@0.0.1440.920" timestamp="1583658885375" />
+    <state x="343" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584456846272">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="343" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.920@0.0.1440.920" timestamp="1584456846272" />
+    <state x="476" y="163" key="#xdebugger.evaluate" timestamp="1584542570666">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="476" y="163" key="#xdebugger.evaluate/0.0.1440.920@0.0.1440.920" timestamp="1584542570666" />
+    <state x="501" y="216" key="FileChooserDialogImpl" timestamp="1583468996860">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="501" y="216" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1583468996860" />
+    <state width="1397" height="163" key="GridCell.Tab.0.bottom" timestamp="1585395809471">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="163" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1585395809471" />
+    <state width="1397" height="163" key="GridCell.Tab.0.center" timestamp="1585395809470">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="163" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1585395809470" />
+    <state width="1397" height="163" key="GridCell.Tab.0.left" timestamp="1585395809465">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="163" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1585395809465" />
+    <state width="1397" height="163" key="GridCell.Tab.0.right" timestamp="1585395809471">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="163" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1585395809471" />
+    <state width="1397" height="300" key="GridCell.Tab.1.bottom" timestamp="1585395809421">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="300" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1585395809421" />
+    <state width="1397" height="300" key="GridCell.Tab.1.center" timestamp="1585395809421">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="300" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1585395809421" />
+    <state width="1397" height="300" key="GridCell.Tab.1.left" timestamp="1585395809421">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="300" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1585395809421" />
+    <state width="1397" height="300" key="GridCell.Tab.1.right" timestamp="1585395809421">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="300" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1585395809421" />
+    <state x="222" y="103" key="SettingsEditor" timestamp="1583199437919">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="222" y="103" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1583199437919" />
+    <state x="442" y="205" width="576" height="524" key="StructurePopup" timestamp="1585063056548">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="442" y="205" width="576" height="524" key="StructurePopup/0.0.1440.920@0.0.1440.920" timestamp="1585063056548" />
+    <state x="404" y="285" key="com.intellij.ide.util.TipDialog" timestamp="1583198457122">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="404" y="285" key="com.intellij.ide.util.TipDialog/0.0.1440.920@0.0.1440.920" timestamp="1583198457122" />
+    <state x="351" y="76" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583384348929">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="351" y="76" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.920@0.0.1440.920" timestamp="1583384348929" />
+    <state x="517" y="378" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583658719129">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="517" y="378" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.920@0.0.1440.920" timestamp="1583658719129" />
+    <state x="451" y="215" key="extract.method.dialog" timestamp="1584066267060">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="451" y="215" key="extract.method.dialog/0.0.1440.920@0.0.1440.920" timestamp="1584066267060" />
+    <state x="401" y="193" width="654" height="534" key="find.popup" timestamp="1585136725921">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="401" y="193" width="654" height="534" key="find.popup/0.0.1440.920@0.0.1440.920" timestamp="1585136725921" />
+    <state x="383" y="209" width="672" height="678" key="search.everywhere.popup" timestamp="1585219766672">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="383" y="209" width="672" height="678" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" timestamp="1585219766672" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/qian/ling/yi/leetcode/UniqueSolution.java</url>
+          <line>200</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/qian/ling/yi/leetcode/UniqueSolution.java</url>
+          <line>197</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/qian/ling/yi/leetcode/UniqueSolution.java</url>
+          <line>188</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/qian/ling/yi/leetcode/UniqueSolution.java</url>
+          <line>263</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/FunnelBucketRateLimiter.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/FunnelBucketRateLimiter.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/CustomBinaryTree.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/CustomBinaryTree.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/IntegerReverseTest.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/face/MaxCount.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/qian/ling/yi/arithmetic/face/MaxCount.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

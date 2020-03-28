@@ -3,6 +3,7 @@ package qian.ling.yi.thread;
 import qian.ling.yi.AbstractTest;
 
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by liuguobin on 2016/10/25.
@@ -20,8 +21,8 @@ public class CountDownLatchTest extends AbstractTest{
         CountDownLatchTest countDownLatchTest = new CountDownLatchTest();
         new Thread(countDownLatchTest.new BasicThread()).start();
         new Thread(countDownLatchTest.new BasicThread()).start();
-////        mCountDownLatch.await(1, TimeUnit.SECONDS);//等一秒，不管结果，继续执行
-////        System.out.println("不等了");
+        mCountDownLatch.await(1, TimeUnit.SECONDS);//等一秒，不管结果，继续执行
+        System.out.println("不等了");
 //        mCountDownLatch.await();//
 
         Thread.sleep(1000);
@@ -36,8 +37,9 @@ public class CountDownLatchTest extends AbstractTest{
         public void run() {
             logger.info("begin 还需要执行：{}个线程", mCountDownLatch.getCount());
             try {
-                Thread.sleep(2000);
+//                Thread.sleep(2000);
                 mCountDownLatch.await();
+//                mCountDownLatch.await();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

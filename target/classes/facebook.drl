@@ -1,0 +1,21 @@
+//包名 哪个包下的drl规则文件 只是逻辑上的分类 不是实际意义的
+package com.droos.test;
+
+//需要进行规则匹配的对象（ fact ）
+import qian.ling.yi.ext.drools.Facebook;
+
+//规则名称
+rule "a"
+            when
+                Facebook(用户名.trim() not in ("1"))
+
+//                Facebook(好友数量< 300 &&  好友数量 not in (" ",null,'null') )
+//   $R_result: Result( type == '301' && item == 'result' )
+//      $R_code: Result( type == '301' && item == 'rejectReasonCode1')
+//      $R_strategy:Result( type == '301' && item == 'strategyBranch')
+        then
+        System.out.println("D");
+        System.out.println("A13F4001");
+        System.out.println("'A13F4'");
+//       insert( new Result('301','antiFraudRiskTip','Facebook info').setVal('Facebook friends is insufficient'));
+end

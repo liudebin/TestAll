@@ -25,4 +25,6 @@ public class InnerClassInstance extends AbstractTest{
         final Object o = declaredConstructors[0].newInstance(new InnerClassPojo());
         System.out.println(((InnerClassPojo.InnerClass)o).getCount());
     }
+
+
 }

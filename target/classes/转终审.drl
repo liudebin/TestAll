@@ -1,0 +1,73 @@
+package com.droos.test
+
+
+
+/*
+ruleNo          		规则调用编号     
+isQuery               	是否查询	Y：查询；N：不查询；      
+isSuccess               决策是否调用成功   	1：成功；0：失败；
+
+101：准入；
+201-299：外部资信查询策略；
+301：策略计算；
+401：人工审核案件流转；
+501：借款审核规则；
+601-699：外部资信查询策略；
+701：资信判断规则；
+*/
+
+
+rule "401"
+	       agenda-group "401"
+	       no-loop true
+	       salience 9999
+    when eval(true)
+	then
+	    System.out.println("401");
+	    System.out.println("Y");
+	    System.out.println("1");
+	    System.out.println("A");
+	    System.out.println("401规则执行");
+end
+
+
+
+
+//rule "初审拒绝不转终审M51F4"
+//        agenda-group "401"
+//        salience -4
+//        no-loop true    
+//        when
+ //                      电核输入(电核的审核结果=="RJ" && 原因码1 == "M51F4")
+//			$R_result:	Result( type == '401' && item == 'result' )
+//            $R_FApprove:	Result( type == '401' && item == 'isFinalApprove' )
+//    		$R_code:	Result( type == '401' && item == 'rejectReasonCode1')
+//        then
+//            $R_result.setVal("D");
+//		    $R_FApprove.setVal("N");
+//            $R_code.setVal('M51F4');
+//end
+
+
+
+//rule "初审拒绝不转终审M51P1"
+//        agenda-group "401"
+//        salience -4
+//        no-loop true    
+//        when
+ //                    电核输入(电核的审核结果 in ("RJ")  && 原因码1 in( "M51P1") )
+ //           $telChkInfo:电核输入()           
+//			$R_result:	Result( type == "401" && item == "result" )
+//            $R_FApprove:	Result( type == "401" && item == "isFinalApprove" )			
+//    		$R_code:	Result( type == "401" && item == "rejectReasonCode1")
+//        then
+//            $R_result.setVal("D");
+//		    $R_FApprove.setVal("N");
+//            $R_code.setVal("M51P1");
+//            insert( new Result("401","telChkInfo:","result").setVal($telChkInfo.get电核的审核结果()) );
+//            insert( new Result("401","telChkInfo:","reasoncode1").setVal($telChkInfo.get原因码1()) );
+//end
+
+
+
+

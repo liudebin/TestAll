@@ -8,6 +8,7 @@ package qian.ling.yi.base;
  */
 
 public class InnerClassPojo {
+    int i ;
     class InnerClass{
         int count;
         int weight;
@@ -28,6 +29,9 @@ public class InnerClassPojo {
             this.weight = weight;
         }
 
+        public  void test() {
+            i = 2;
+        }
 
     }
 }

@@ -1,0 +1,18 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <!--　　　　　　　　　　　　<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+    <!--　　　　　　　　　　　　　　<fileNamePattern>logFile.%d{yyyy-MM-dd}.log</fileNamePattern>-->
+    <!--　　　　　　　　　　　　　　<maxHistory>30</maxHistory>-->
+    <!--　　　　　　　　　　　　</rollingPolicy>-->
+        <encoder>
+    　　  <pattern>%-4relative %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{100} [%line]  - %msg%n</pattern>
+    　　</encoder>
+    　</appender>
+
+
+    <logger name="org.springframework" level="DEBUG"/>
+    　<root level="DEBUG">
+    　   <appender-ref ref="STDOUT" />
+    　</root>
+
+</configuration>

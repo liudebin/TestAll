@@ -62,4 +62,22 @@ public class IsStreamTest extends AbstractTest {
             return firstThrow + secondThrow;
         };
     }
+
+    @Test
+    public void testParallel(){
+        long l = System.nanoTime();
+        IntStream.range(1, 100).forEach(IsStreamTest::s);
+        long l1 = System.nanoTime();
+        System.out.println(l1 - l);
+        IntStream.range(1, 100).parallel().forEach(IsStreamTest::s);
+        System.out.println(System.nanoTime() - l1);
+    }
+
+    private static void s(int i) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }

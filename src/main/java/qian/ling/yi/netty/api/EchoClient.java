@@ -34,7 +34,9 @@ public class EchoClient {
             //创建EventLoopGroup对象并设置到Bootstrap中，EventLoopGroup可以理解为是一个线程池，这个线程池用来处理连接、接受数据、发送数据
             nioEventLoopGroup = new NioEventLoopGroup();
             //创建InetSocketAddress并设置到Bootstrap中，InetSocketAddress是指定连接的服务器地址
-            bootstrap.group(nioEventLoopGroup).channel(NioSocketChannel.class).remoteAddress(new InetSocketAddress(host, port))
+            bootstrap.group(nioEventLoopGroup)
+                    .channel(NioSocketChannel.class)
+                    .remoteAddress(new InetSocketAddress(host, port))
                     .handler(new ChannelInitializer<SocketChannel>() {
                         //添加一个ChannelHandler，客户端成功连接服务器后就会被执行
                         @Override
