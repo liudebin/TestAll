@@ -3,6 +3,8 @@ package qian.ling.yi.arithmetic;
 import org.junit.Test;
 import qian.ling.yi.collection.ListNode;
 
+import java.util.Arrays;
+
 public class LinkReverseTest {
 
 
@@ -20,6 +22,40 @@ public class LinkReverseTest {
             head = next;
         }
         return pre;
+    }
+
+    public ListNode reversePrint(ListNode head) {
+        ListNode pre=null;
+        ListNode tmp;
+        while(head != null) {
+            tmp = head.next;
+            head.next = pre;
+            pre = head;
+            head = tmp;
+        }
+        return pre;
+
+    }
+
+    public int[] reversePrintInt(ListNode head) {
+        ListNode pre=null;
+        ListNode tmp;
+        int i = 0;
+        while(head != null) {
+            tmp = head.next;
+            head.next = pre;
+            pre = head;
+            head = tmp;
+            i ++;
+        }
+        int[] ints = new int[i];
+        for (int i1 = 0; i1 < i; i1++) {
+            ints[i1] = pre.v;
+            pre = pre.next;
+        }
+
+        return ints;
+
     }
 
     @Test
@@ -41,12 +77,15 @@ public class LinkReverseTest {
         }
 
         System.out.println("-----");
-        ListNode listNode = ReverseList(head);
-        while (null!=listNode) {
+//        ListNode listNode = reversePrint(head);
+//        while (null!=listNode) {
+//
+//            System.out.println(listNode.getV());
+//            listNode = listNode.getNext();
+//        }
 
-            System.out.println(listNode.getV());
-            listNode = listNode.getNext();
-        }
+        int[] a = reversePrintInt(head);
+        System.out.println(Arrays.toString(a));
     }
 
 }
