@@ -2,7 +2,7 @@ package qian.ling.yi.ext.vavr;
 
 import io.vavr.collection.List;
 import io.vavr.control.Try;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class TryTest {
     @Test

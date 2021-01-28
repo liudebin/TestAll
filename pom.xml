@@ -364,6 +364,11 @@
           </exclusions>
       </dependency>
       <dependency>
+          <groupId>io.vavr</groupId>
+          <artifactId>vavr</artifactId>
+          <version>0.10.2</version>
+      </dependency>
+      <dependency>
       <groupId>com.github.sgroschupf</groupId>
       <artifactId>zkclient</artifactId>
       <version>0.1</version>

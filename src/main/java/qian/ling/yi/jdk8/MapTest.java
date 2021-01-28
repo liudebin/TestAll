@@ -1,5 +1,7 @@
 package qian.ling.yi.jdk8;
 
+import org.junit.Test;
+
 import java.util.stream.Stream;
 
 public class MapTest {
